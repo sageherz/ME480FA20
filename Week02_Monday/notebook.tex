@@ -1,0 +1,939 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{Week2\_Monday}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    Table of Contents{}
+
+{{1~~}Timers and Counters as Finite State Machines}
+
+{{1.1~~}Timers}
+
+{{1.1.1~~}State Transition Diagram}
+
+{{1.1.2~~}State Transition Table}
+
+{{1.2~~}Exercise: Timers}
+
+{{1.3~~}Counters}
+
+{{1.3.1~~}State Transition Diagram}
+
+{{1.3.2~~}State Transition Table}
+
+{{1.3.3~~}Memory Map}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{metakernel} \PY{k}{import} \PY{n}{register\PYZus{}ipython\PYZus{}magics}
+        \PY{n}{register\PYZus{}ipython\PYZus{}magics}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \section{Timers and Counters as Finite State
+Machines}\label{timers-and-counters-as-finite-state-machines}
+
+    \subsection{Timers}\label{timers}
+
+In many applications where a FSM is a good choice for high-level program
+operation, you'll find yourself needing to "bake in" smaller state
+machines to handle small tasks. For instance: if you need to create a
+system that "waits" for a specified period of time after a button is
+pressed, or requires that a button is pressed for a particular length of
+time to "make sure" that the user meant to enter a particular machine
+state, you'll likely need to implement (or use) some kind of
+\textbf{timer.} Our version of the timer will mirror what you'll see
+when you use Programmable Logic Controllers (PLCs) to implement state
+machines in Lab 3. It behaves in the following way:
+
+\begin{itemize}
+\tightlist
+\item
+  When the input to the timer is TRUE, the timer counts up (usually in
+  milliseconds or tens of milliseconds)
+\item
+  When the elapsed time is greater than some threshold, the timer's
+  "status bit" (a boolean variable) is set to TRUE. Otherwise it is
+  FALSE.
+\item
+  When the input to the timer is FALSE, the timer stops counting and the
+  elapsed time is reset to zero.
+\end{itemize}
+
+There are timers built in to the Boolean Algebra Program simulator you
+used on Friday and over the weekend. We haven't discussed them yet, but
+take a moment to experiment with a simple program that activates the
+timer below. Here's a suggested program that's very simple, but will
+show you how the timer works:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{T0_EN }\OperatorTok{=}\NormalTok{ X4}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+Implemented as a part of a larger state machine, timers are very useful.
+For instance, if we wanted to illuminate the output \(Y1\) if \(X1\) was
+on for 2 seconds, we could do that by entering the code below into the
+simulator:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{T0_EN }\OperatorTok{=}\NormalTok{ X4}\OperatorTok{;}
+\NormalTok{Y1}\OperatorTok{=}\NormalTok{T0}\OperatorTok{&&}\NormalTok{X4}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+If we wanted to make output \(Y1\) flash on for .5 seconds, and off for
+.5 seconds, we could use the following code (assuming that the timer in
+the simulator is set for a duration of 1000 ms):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{T0_EN }\OperatorTok{=}\NormalTok{ X4}\OperatorTok{&&!}\NormalTok{T0}\OperatorTok{;}
+\NormalTok{Y1 }\OperatorTok{=}\NormalTok{ X4}\OperatorTok{&&}\NormalTok{(TA0}\OperatorTok{<=}\DecValTok{500}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+In this code, you see that T0, which represents the timer's status bit
+(elapsed time greater than or equal to "duration"), resets the timer
+when it goes true. So, the timer counts until it resets itself, as long
+as X4 is true. In the next line, you see that we use a special output
+variable that the timer provides called TA0 which is \textbf{not}
+boolean! It represents the elapsed time of the counter at any given
+moment. By using the logical condition TA0\textless{}=500, we say that
+whenever the timer sees fewer than .5 seconds pass, and if X4 is TRUE,
+Y1 should be true. Otherwise, Y1 should be false. This is the "flashing"
+behavior we wanted on Y1. So timers, which have a few key elements, can
+be used in a variety of ways in larger state machine designs.
+
+Hopefully, you get the idea. However, even though timers are used
+frequently in state machine design, they are themselves simple state
+machines!
+
+In the rest of this section, we'll examine how the timer works, and at
+the end, you'll implement your own simple timer using the
+\href{www.processing.org}{Processing} programming language. Processing
+is a great choice because it allows us to test interactive code right in
+the Jupyter notebook, and also because its syntax and program structure
+are almost identical to the \href{www.arduino.cc}{Arduino} programming
+language, which is what you'll be using to control your Zumo robot this
+semester. Best to get your practice in early!!!
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{html}
+        \PYZlt{}p data\PYZhy{}height=\PYZdq{}1000\PYZdq{} data\PYZhy{}theme\PYZhy{}id=\PYZdq{}0\PYZdq{} data\PYZhy{}slug\PYZhy{}hash=\PYZdq{}ZJJgOL\PYZdq{} data\PYZhy{}default\PYZhy{}tab=\PYZdq{}result\PYZdq{} data\PYZhy{}user=\PYZdq{}brownaa\PYZdq{} data\PYZhy{}embed\PYZhy{}version=\PYZdq{}2\PYZdq{} data\PYZhy{}pen\PYZhy{}title=\PYZdq{}p5.js Boolean Algebra Program Simulator w/Timers, Counters and touch scaled\PYZdq{} class=\PYZdq{}codepen\PYZdq{}\PYZgt{}See the Pen \PYZlt{}a href=\PYZdq{}https://codepen.io/brownaa/pen/ZJJgOL/\PYZdq{}\PYZgt{}p5.js Boolean Algebra Program Simulator w/Timers, Counters and touch scaled\PYZlt{}/a\PYZgt{} by Alexander Brown (\PYZlt{}a href=\PYZdq{}https://codepen.io/brownaa\PYZdq{}\PYZgt{}@brownaa\PYZlt{}/a\PYZgt{}) on \PYZlt{}a href=\PYZdq{}https://codepen.io\PYZdq{}\PYZgt{}CodePen\PYZlt{}/a\PYZgt{}.\PYZlt{}/p\PYZgt{}
+        \PYZlt{}script async src=\PYZdq{}https://production\PYZhy{}assets.codepen.io/assets/embed/ei.js\PYZdq{}\PYZgt{}\PYZlt{}/script\PYZgt{}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+<IPython.core.display.HTML object>
+    \end{verbatim}
+
+    
+    \subsubsection{State Transition Diagram}\label{state-transition-diagram}
+
+As with any state machine design, the first step is to determine what
+states we need to describe our timer. I propose that we work with a very
+simple state machine structure, given below.
+
+    \begin{figure}
+\centering
+\includegraphics{attachment:image.png}
+\caption{image.png}
+\end{figure}
+
+    This is probably the simplest way to represent the timer. It's either
+waiting for an input, which we'll call TMR\_EN, or it's timing the
+elapsed time since TMR\_EN has been TRUE. You'll notice that I did not
+include the duration or the elapsed time as states, or mention them at
+all in the state transition diagram. This is because they're not
+possible to represent by a Boolean variable!! They're continuous
+quantities.
+
+You may be wondering if having non-Boolean components to your state
+machine "breaks the rules" of FSM design. The answer is that it does
+not. While only conditions and/or states that can be reduced to a
+Boolean TRUE or FALSE are allowed on a state transition diagram or in a
+state transition table, the "output" block of your Boolean Algebra
+Program (Block 4) can activate outputs and/or evaluate variables in
+logical tests (blocks 1-3) that are not Boolean in nature. So, while
+those variables aren't directly part of the state transition
+architecture of your system, you can use them in some contexts. We'll
+get a chance to try this very soon, but for now, let's construct a quick
+state transition table for the timer.
+
+    \subsubsection{State Transition Table}\label{state-transition-table}
+
+Using the simple design above, our state transition table is relatively
+simple. If TMR\_EN is true, the machine is timing. If it is false, the
+machine is waiting.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+Transition & Start & Condition & End\tabularnewline
+\midrule
+\endhead
+\(1\) & \(WAITING\) & A: \(TMR\_EN\) & \(TIMING\)\tabularnewline
+\(2\) & \(WAITING\) & B: \(\overline{TMR\_EN}\) &
+\(WAITING\)\tabularnewline
+\(3\) & \(TIMING\) & C: \(\overline{TMR\_EN}\) &
+\(WAITING\)\tabularnewline
+\(4\) & \(TIMING\) & D: \(TMR\_EN\) & \(TIMING\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+As a "gut check," think about this table and make sure all possible
+combinations of inputs are handled, and that the table covers all
+logical possibilities adequately without breaking any rules (such as
+being in two states at once). This is the time to make sure this is the
+case... you \textbf{do not} want to wait until you're testing your state
+machine to discover that it can be in 5 states at once!!
+
+    \subsection{Exercise: Timers}\label{exercise-timers}
+
+Based on the state transition diagram and table above, construct a draft
+Boolean Algebra Program and memory map (including the non-Boolean Output
+variables with descriptions) for a timer. The memory map should be
+simple, since the draft program below includes all of the variable names
+you'll need. The behavior of the timer is as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  While you hold the 'a' key, the timer counts up.
+\item
+  When the specified duration has elapsed, the TMR variable goes from
+  false to true.
+\item
+  If the 'a' key is not held, the timer stops counting and the elapsed
+  time 'elapsed' resets.
+\end{itemize}
+
+You will be implementing this timer program in Processing, which is
+slightly different than the Boolean Algebra Simulator. Because of this,
+there are some specific hints that may be helpful.
+
+Like the Boolean Algebra simulator you've already used, Processing will
+require you to write the code that implements your state machine. There
+are comments where each block of your Boolean Algebra program should go,
+but there is no logic there yet. You may find
+\href{https://processing.org/reference/keyPressed.html}{this page}
+and/or \href{https://processing.org/reference/key.html}{this page}
+helpful as you're trying to figure out how to implement the machine and
+language-specific aspects of you'r program's "Block 1" which needs to
+handle user inputs. You may find
+\href{https://processing.org/reference/millis_.html}{this page} helpful
+for the Block 4 (output) portion of your program... specifically where
+elapsed time is concerned. I suggest that you always keep track of the
+"current time" using the millis() function in Processing. Obviously,
+you'll need to declare a variable to keep track of that time. Then,
+because millis() only returns current time, I suggest that you reset a
+variable representing the timer's "start time" any time the machine is
+in the "WAITING" state. If it's in the "TIMING" state, you can set the
+elapsed time to current\_time-start\_time (assuming you use those as
+variable names and declare them).
+
+Draft your memory map and Boolean Algebra program in the Markdown cell
+below:
+
+    In the figure below, I've provided you a marked-up guide to the template
+Processing program you'll be using to implement your state machine.
+Using this figure as a guide, implement your draft Boolean Algebra
+program above in the Processing language input cell below. Note that the
+\%\%processing line at the top of the cell tells Jupyter to run the code
+using the Processing language rather than MATLAB (or whatever your
+kernel is currently set to). Believe it or not, the marked-up figure
+shows a complete, working program. This should give you an idea of how
+many lines you might need to add to complete your design. It's not much,
+but it can be tricky!! Follow the process and you'll be fine.
+
+    \begin{figure}
+\centering
+\includegraphics{attachment:image.png}
+\caption{image.png}
+\end{figure}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{processing}
+        //initialize boolean variables 
+        boolean TMR=false;
+        boolean TMR\PYZus{}EN=false;
+        boolean TIMING=false;
+        boolean setTIMING = false;
+        boolean WAITING=true;//set the system to start in \PYZdq{}waiting\PYZdq{}
+        boolean setWAITING=false;
+        
+        //non\PYZhy{}boolean variables we will need
+        int elapsed=0;
+        int starttime = millis();
+        int duration = 3000;//duration of the timer in milliseconds
+        
+        //the setup() function runs ONCE
+        void setup() \PYZob{}
+          size(640, 360);//set the size of our window
+          background(0);//set the background color of the window
+          textSize(32);//set the size of any text we use
+          textAlign(CENTER);//set the alignment of our text
+        \PYZcb{}
+        
+        void draw() \PYZob{} 
+            // block 1: process inputs. key \PYZdq{}a\PYZdq{} represents TMR\PYZus{}EN
+            //block 1 is machine and language specific.
+            if (keyPressed) \PYZob{}
+            if (key == \PYZsq{}a\PYZsq{}) \PYZob{}
+              TMR\PYZus{}EN=true;
+            \PYZcb{}
+          \PYZcb{} else \PYZob{}
+            TMR\PYZus{}EN=false;
+          \PYZcb{}
+            if(WAITING==true)\PYZob{}
+                starttime=millis();
+            \PYZcb{}
+            elapsed=millis()\PYZhy{}starttime;
+            
+            //block 2: state transition logic
+            
+            
+            //block 3: update machine state
+           
+            
+            //block 4: OUTPUTS and old variables
+            
+            
+            //first, draw the background to clear the screen
+            //draw the background either white or black, depending on value of TMR
+            //255 is white, 0 is black. so watch how we can map true/false to white or black.
+            background(255*int(TMR));
+            //set the color for the text to the opposite of TMR
+            fill(255*int(!TMR));
+            //now draw an indicator for our elapsed time
+            text(\PYZdq{}Elapsed Time\PYZdq{},320,180);
+            text(str(elapsed),320,280);
+        \PYZcb{}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+<IPython.core.display.HTML object>
+    \end{verbatim}
+
+    
+    \subsection{Counters}\label{counters}
+
+A counter, which is another example of a finite state machine that often
+"lives inside" of larger FSMs, has three inputs. If the user (or the
+state transition logic) brings the "up" input high with a unique rising
+edge (was false, now true-\/- like a button press), an internal variable
+(integer) in the counter will count up by one. Similarly, a rising edge
+on the "down" input will bring the count, which we'll call the counter's
+"accumulator," down by one. Generally, the accumulator has a minimum
+value of zero. Whenever the "reset" input on the counter is true, the
+count is reset to zero. I've left you another copy of the Boolean
+algebra simulator below, which has two counters for you to use. Play
+around with CT0\_UP, CT0\_DOWN, and CT0\_RST to get a feel for how a
+counter works. The counter's "status bit," which in the simulator is
+called CT0 for counter 0, is true when the accumulator's count (CTA0) is
+greater than the "threshold," which you can set using the "CNT+" and
+"CNT-" buttons on the counter. Try the following boolean algebra program
+to get started:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CT0_UP}\OperatorTok{=}\NormalTok{X4}\OperatorTok{;}
+\NormalTok{CT0_DOWN}\OperatorTok{=}\NormalTok{X5}\OperatorTok{;}
+\NormalTok{CT0_RST}\OperatorTok{=}\NormalTok{X6}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{html}
+        \PYZlt{}p data\PYZhy{}height=\PYZdq{}1000\PYZdq{} data\PYZhy{}theme\PYZhy{}id=\PYZdq{}0\PYZdq{} data\PYZhy{}slug\PYZhy{}hash=\PYZdq{}ZJJgOL\PYZdq{} data\PYZhy{}default\PYZhy{}tab=\PYZdq{}result\PYZdq{} data\PYZhy{}user=\PYZdq{}brownaa\PYZdq{} data\PYZhy{}embed\PYZhy{}version=\PYZdq{}2\PYZdq{} data\PYZhy{}pen\PYZhy{}title=\PYZdq{}p5.js Boolean Algebra Program Simulator w/Timers, Counters and touch scaled\PYZdq{} class=\PYZdq{}codepen\PYZdq{}\PYZgt{}See the Pen \PYZlt{}a href=\PYZdq{}https://codepen.io/brownaa/pen/ZJJgOL/\PYZdq{}\PYZgt{}p5.js Boolean Algebra Program Simulator w/Timers, Counters and touch scaled\PYZlt{}/a\PYZgt{} by Alexander Brown (\PYZlt{}a href=\PYZdq{}https://codepen.io/brownaa\PYZdq{}\PYZgt{}@brownaa\PYZlt{}/a\PYZgt{}) on \PYZlt{}a href=\PYZdq{}https://codepen.io\PYZdq{}\PYZgt{}CodePen\PYZlt{}/a\PYZgt{}.\PYZlt{}/p\PYZgt{}
+        \PYZlt{}script async src=\PYZdq{}https://production\PYZhy{}assets.codepen.io/assets/embed/ei.js\PYZdq{}\PYZgt{}\PYZlt{}/script\PYZgt{}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+<IPython.core.display.HTML object>
+    \end{verbatim}
+
+    
+    In this section, our goal will be to develop a program in Processing
+that simulates the counter's functionality. As usual, the first step is
+to choose a set of representative states and draw a state transition
+diagram.
+
+\subsubsection{State Transition Diagram}\label{state-transition-diagram}
+
+    \begin{figure}
+\centering
+\includegraphics{attachment:image.png}
+\caption{image.png}
+\end{figure}
+
+    Remember that there is usually more than one effective way to organize a
+FSM and choose states, so don't be surprised if this isn't quite the way
+you would have organized this yourself. I'm using this structure to
+point out something very specific. Notice that the "UP" and "DOWN"
+states do not have latches. This is intentional-\/- because we only want
+the counter to count up once for a unique press on the "count up" input,
+which we'll call "UP\_IN" here, and then return to the "WAITING" state,
+we will design our transitions so that the system can only be in "UP"
+for one loop. A similar procedure will be followed for the "DOWN" state.
+Because we want to be able to clear the count at any time, the "RST"
+state will have a latch, so that pulling the reset input "RST\_IN" high
+will always result in the counter stalling with the accumulator at zero.
+
+Given the state transition diagram above, we can develop the following
+state transition table and memory map.
+
+\subsubsection{State Transition Table}\label{state-transition-table}
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+\begin{minipage}[b]{0.07\columnwidth}\centering\strut
+Transition\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering\strut
+Start State\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering\strut
+Condition\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering\strut
+End State\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(WAITING\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+A: \(UP\_PRS\) \(\cdot\overline{(DN\_PRS+ RST\_IN)}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(UP\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(UP\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+B: \(1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(WAITING\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(3\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(WAITING\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+C: \(DN\_PRS\)\(\cdot\overline{(UP\_PRS+RST\_IN)}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(DOWN\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(4\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(DOWN\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+D: \(1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(WAITING\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(5\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(WAITING\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+E:
+\$\overline{DN\_PRS\cdot UP\_PRS \cdot RST\_IN}+UP\_PRS\cdot{(RST\_IN+DN\_PRS)}
++DN\_PRS\cdot RST\_IN \$\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+WAITING\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(6\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+\(RST\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+F: \(RST\_IN\)\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+RST\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\centering\strut
+.........\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+..............\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+............................................................................................................................................................................................\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
+...............\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+There are a few key items to discuss here. First, notice that the
+transition conditions do not allow for transitions out of the "WAITING"
+state if more than one button is pressed in the same scan. Also notice
+that the variables "DN\_PRS" and "UP\_PRS" represent rising edges on the
+"UP\_IN" and "DN\_IN" variables. A memory map for the program's
+variables is given below.
+
+\subsubsection{Memory Map}\label{memory-map}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+Variable\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+Description\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+DN\_IN\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Input to the counter that counts down\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+UP\_IN\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Input to the counter that counts up\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+UP\_IN\_OLD\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Last loop value of the up input\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+DN\_IN\_OLD\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Last loop value of the down input\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+UP\_PRS\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Unique press detected on up input\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+DN\_PRS\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Unique press detected on down input\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RST\_IN\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Reset input\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+DOWN\_STATE\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Down state (indicates count should be decreased)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+UP\_STATE\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Up state (indicates count should be increased)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RST\_STATE\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Reset state (indicates count should be 0)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+SET\_DN\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Set down state\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+SET\_UP\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Set up state\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+SET\_RST\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Set reset state\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+SET\_WAITING\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+Set waiting state\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+COUNT\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+The count (integer) of the accumulator\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+CT\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+The "status bit" of the counter. True when accumulator greater than
+threshold\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+THRESH\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+The integer threshold of the counter.\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Your task is to draft and implement a Boolean Algebra Program in
+Processing based on the template code provided to you below. You should
+implement your program so that a press of key "a" counts up, "s" counts
+down, and "d" resets. Like the last example, the template is already set
+up to change background and text color when the variable CT is true.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{o}{\PYZpc{}\PYZpc{}}\PY{k}{processing}
+        //initialize boolean variables 
+        boolean DN\PYZus{}IN=false;
+        boolean UP\PYZus{}IN=false;
+        boolean UP\PYZus{}IN\PYZus{}OLD=false;
+        boolean DN\PYZus{}IN\PYZus{}OLD = false;
+        boolean UP\PYZus{}PRS = false;
+        boolean DN\PYZus{}PRS = false;
+        boolean RST\PYZus{}IN = false;
+        boolean DOWN\PYZus{}STATE = false;
+        boolean UP\PYZus{}STATE = false;
+        boolean RST\PYZus{}STATE = false;
+        boolean WAITING = true;//set the system to \PYZdq{}waiting\PYZdq{} on first loop.
+        boolean SET\PYZus{}DN = false;
+        boolean SET\PYZus{}UP = false;
+        boolean SET\PYZus{}RST = false;
+        boolean SET\PYZus{}WAITING = false;
+        boolean CT = false;
+        
+        //non\PYZhy{}boolean variables we will need
+        int THRESH=3;
+        int COUNT=0;
+        
+        //the setup() function runs ONCE
+        void setup() \PYZob{}
+          size(640, 360);//set the size of our window
+          background(0);//set the background color of the window
+          textSize(32);//set the size of any text we use
+          textAlign(CENTER);//set the alignment of our text
+        \PYZcb{}
+        
+        void draw() \PYZob{} 
+            // block 1: process inputs. key \PYZdq{}a\PYZdq{} represents TMR\PYZus{}EN
+            //block 1 is machine and language specific.
+           
+            UP\PYZus{}PRS = UP\PYZus{}IN\PYZam{}\PYZam{}!UP\PYZus{}IN\PYZus{}OLD;
+            DN\PYZus{}PRS = DN\PYZus{}IN\PYZam{}\PYZam{}!DN\PYZus{}IN\PYZus{}OLD;
+         
+            //block 2: state transition logic
+           
+            
+            //block 3: update machine state
+           
+            
+            //block 4: OUTPUTS and old variables
+            //first determine elapsed time and/or starttime
+            
+            
+            //now, draw the background to clear the screen
+            //draw the background either white or black, depending on value of CT
+            //255 is white, 0 is black. so watch how we can map true/false to white or black.
+            background(255*int(CT));
+            //set the color for the text to the opposite of TMR
+            fill(255*int(!CT));
+            //now draw an indicator for our count
+            text(\PYZdq{}COUNT\PYZdq{},320,180);
+            text(str(COUNT),320,280);
+        \PYZcb{}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+<IPython.core.display.HTML object>
+    \end{verbatim}
+
+    
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

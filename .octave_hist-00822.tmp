@@ -1,0 +1,64 @@
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmp0rqlhmg2", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Aug 20 19:46:32 2020 UTC <herzs@ip-10-1-3-175>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Thu Aug 20 21:05:59 2020 UTC <herzs@ip-10-1-3-175>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmpi47svxhq", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Aug 21 02:17:54 2020 UTC <herzs@ip-10-1-3-85>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmp4zw1xm1e", "png", "Figure", -1, -1, 0, 0)
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmpy3j2hdqx", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Aug 21 14:47:13 2020 UTC <herzs@ip-10-1-3-85>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Fri Aug 21 20:56:55 2020 UTC <herzs@ip-10-1-3-43>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Aug 23 18:21:44 2020 UTC <herzs@ip-10-1-3-16>

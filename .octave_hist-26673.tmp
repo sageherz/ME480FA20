@@ -1,0 +1,798 @@
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmp0rqlhmg2", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Aug 20 19:46:32 2020 UTC <herzs@ip-10-1-3-175>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Thu Aug 20 21:05:59 2020 UTC <herzs@ip-10-1-3-175>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmpi47svxhq", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Aug 21 02:17:54 2020 UTC <herzs@ip-10-1-3-85>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmp4zw1xm1e", "png", "Figure", -1, -1, 0, 0)
+a = true
+b = false
+not(a)
+_make_figures("/tmp/tmpy3j2hdqx", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Aug 21 14:47:13 2020 UTC <herzs@ip-10-1-3-85>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Fri Aug 21 20:56:55 2020 UTC <herzs@ip-10-1-3-43>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week01_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Mon Aug 24 15:44:15 2020 UTC <herzs@ip-10-1-3-95>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_1");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Mon Aug 24 18:36:50 2020 UTC <herzs@ip-10-1-3-56>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_1");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Mon Aug 24 22:06:46 2020 UTC <herzs@ip-10-1-3-146>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmp_0_z82dv", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmpow3j9jgs", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+IR = [
+286 
+287 
+288 
+288 
+288
+288
+286
+286
+284
+283
+284
+284
+284
+235
+282
+282
+283
+285
+287
+432
+434
+433
+429
+427
+426
+283
+284
+284
+285
+288
+430
+431
+425
+422
+422
+425
+350
+285
+284
+284
+283
+283
+282
+282
+282
+283
+284
+284
+286
+285];
+plot(IR)
+_make_figures("/tmp/tmpyfieiutb", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+IR = [
+286 
+287 
+288 
+288 
+288
+288
+286
+286
+284
+283
+284
+284
+284
+282
+282
+283
+285
+287
+432
+434
+433
+429
+427
+426
+283
+284
+284
+285
+288
+430
+431
+425
+422
+422
+425
+350
+285
+284
+284
+283
+283
+282
+282
+282
+283
+284
+284
+286
+285];
+plot(IR)
+_make_figures("/tmp/tmpm6_eqo6z", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Aug 27 21:07:51 2020 UTC <herzs@ip-10-1-3-182>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week02_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Fri Aug 28 18:46:54 2020 UTC <herzs@ip-10-1-3-209>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Aug 30 19:06:55 2020 UTC <herzs@ip-10-1-3-5>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week02_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+data25 = load('damdata25.txt');
+data50 = load('damdata50.txt');
+t25 = data25(:,1);
+t50 = data50(:,1);
+hvolt25 = data25(:,6);
+hvolt50 = data50(:,6);
+hold on;
+plot(t25,hvolt25)
+plot(t50,hvolt50)
+xlabel('Time (s)')
+ylabel('House Voltage (V)')
+legend('25% Valve Open','50% Valve Open','Location','southeast')
+hold off;
+_make_figures("/tmp/tmp16yncyrd", "png", "Figure", -1, -1, 0, 0)
+y025 = data25(1,6);
+yss25 = data25(end,6);
+SSG25 = (yss25-y025)/25
+% note: units for SSG are [V/%]
+_make_figures("/tmp/tmpnn0l5peb", "png", "Figure", -1, -1, 0, 0)
+y025 = data25(1,6);
+yss25 = data25(end,6)
+SSG25 = (yss25-y025)/25
+% note: units for SSG are [V/%]
+_make_figures("/tmp/tmp66e0gjdn", "png", "Figure", -1, -1, 0, 0)
+% for 25% valve position
+for j = length(hvolt25)-1:-1:1 % starting from last data point and iterating backwards
+    y_diff = abs((yss25-hvolt25(j))/yss25)*100; % calculating percent difference
+    if y_diff > 2 % checking if greater than 2%
+        break; % stopping for loop if above 2%
+    end
+end
+ts25 = t25(j)
+_make_figures("/tmp/tmp3tsuipwa", "png", "Figure", -1, -1, 0, 0)
+% for 25% valve position
+for j = length(hvolt25)-1:-1:1 % starting from last data point and iterating backwards
+    y_diff = abs((yss25-hvolt25(j))/yss25)*100; % calculating percent difference
+    if y_diff > 2 % checking if greater than 2%
+        break; % stopping for loop if above 2%
+    end
+end
+ts25 = t25(j)
+% for 50% valve position
+yss50 = data50(end,6);
+for j = length(hvolt50)-1:-1:1 % starting from last data point and iterating backwards
+    y_diff = abs((yss50-hvolt50(j))/yss50)*100; % calculating percent difference
+    if y_diff > 2 % checking if greater than 2%
+        break; % stopping for loop if above 2%
+    end
+end
+ts50 = t50(j)
+_make_figures("/tmp/tmp6uv81evx", "png", "Figure", -1, -1, 0, 0)
+data100 = load('damdata100.txt');
+t100 = data100(:,1);
+hvolt100 = data100(:,6);
+hold on;
+plot(t25,hvolt25)
+plot(t50,hvolt50)
+plot(t100,hvolt100)
+xlabel('Time (s)')
+ylabel('House Voltage (V)')
+legend('25% Valve Open','50% Valve Open','100% Valve Open','Location','southeast')
+hold off;
+_make_figures("/tmp/tmp2vf51q5c", "png", "Figure", -1, -1, 0, 0)
+data25 = load('damdata25.txt');
+data50 = load('damdata50.txt');
+t25 = data25(:,1);
+t50 = data50(:,1);
+hvolt25 = data25(:,6);
+hvolt50 = data50(:,6);
+hold on;
+plot(t25,hvolt25)
+plot(t50,hvolt50)
+xlabel('Time (s)')
+ylabel('House Voltage (V)')
+legend('25% Valve Open','50% Valve Open','Location','southeast')
+hold off;
+_make_figures("/tmp/tmpoxbh7iks", "png", "Figure", -1, -1, 0, 0)
+y025 = data25(1,6);
+yss25 = data25(end,6);
+SSG25 = (yss25-y025)/25
+% note: units for SSG are [V/%]
+_make_figures("/tmp/tmp0yjr5vvp", "png", "Figure", -1, -1, 0, 0)
+% for 25% valve position
+for j = length(hvolt25)-1:-1:1 % starting from last data point and iterating backwards
+    y_diff = abs((yss25-hvolt25(j))/yss25)*100; % calculating percent difference
+    if y_diff > 2 % checking if greater than 2%
+        break; % stopping for loop if above 2%
+    end
+end
+ts25 = t25(j)
+% for 50% valve position
+yss50 = data50(end,6);
+for j = length(hvolt50)-1:-1:1 % starting from last data point and iterating backwards
+    y_diff = abs((yss50-hvolt50(j))/yss50)*100; % calculating percent difference
+    if y_diff > 2 % checking if greater than 2%
+        break; % stopping for loop if above 2%
+    end
+end
+ts50 = t50(j)
+_make_figures("/tmp/tmpp96p873q", "png", "Figure", -1, -1, 0, 0)
+data100 = load('damdata100.txt');
+t100 = data100(:,1);
+hvolt100 = data100(:,6);
+hold on;
+plot(t25,hvolt25)
+plot(t50,hvolt50)
+plot(t100,hvolt100)
+xlabel('Time (s)')
+ylabel('House Voltage (V)')
+legend('25% Valve Open','50% Valve Open','100% Valve Open','Location','southeast')
+hold off;
+_make_figures("/tmp/tmp1evl56wk", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sun Aug 30 20:47:05 2020 UTC <herzs@ip-10-1-3-78>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week02_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Mon Aug 31 12:01:47 2020 UTC <herzs@ip-10-1-3-213>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week03_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+%let's plot the step response for a prototype second order system with a few damping ratios.
+zeta = .2:.2:2;%damping RATIO
+wn = 10*2*pi;%natural frequency
+%get us a time vector!
+t = linspace(0,.5,1000);
+%initialize our solution matrix
+y = zeros(length(zeta),1000);
+%loop through zetas applying the correct solution.
+%note that the form of the solution here is different but equivalent to the forms derived above (CHECK THEM IF YOU LIKE!)
+for k = 1:length(zeta)
+    if zeta(k)<1
+        y(k,:) = 1-1/sqrt(1-zeta(k)^2).*exp(-zeta(k)*wn*t).*sin(sqrt(1-zeta(k)^2).*wn*t+acos(zeta(k)));
+        legendInfo{k} = ['\zeta = ' num2str(zeta(k))];
+    elseif zeta(k)==1
+        y(k,:) = (1-exp(-zeta(k)*wn.*t)-zeta(k)*wn.*t.*exp(-zeta(k)*wn.*t));
+        legendInfo{k} = ['\zeta = ' num2str(zeta(k))];
+    else
+        a = abs(-zeta(k)*wn + wn*sqrt(zeta(k)^2-1));
+        b = abs(-zeta(k)*wn - wn*sqrt(zeta(k)^2-1));
+        y(k,:) = a*b*1/(a*b)*(1-b*exp(-a*t)/(b-a)+a*exp(-b*t)/(b-a));
+        legendInfo{k} = ['\zeta = ' num2str(zeta(k))];
+    end
+end
+figure
+plot(t,y)
+legend(legendInfo)
+xlabel('Time (s)')
+ylabel('y(t)')
+_make_figures("/tmp/tmp5qrrifyf", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmpwqja6alm", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmpktckgvl1", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Tue Sep 01 02:36:50 2020 UTC <herzs@ip-10-1-3-69>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week02_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Tue Sep 01 21:48:13 2020 UTC <herzs@ip-10-1-3-227>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Wed Sep 02 01:31:50 2020 UTC <herzs@ip-10-1-3-218>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Wed Sep 02 03:02:04 2020 UTC <herzs@ip-10-1-3-241>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Wed Sep 02 13:31:52 2020 UTC <herzs@ip-10-1-3-56>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Wed Sep 02 18:46:50 2020 UTC <herzs@ip-10-1-3-231>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_2");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Wed Sep 02 23:50:58 2020 UTC <herzs@ip-10-1-3-113>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week02_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Thu Sep 03 02:32:07 2020 UTC <herzs@ip-10-1-3-230>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week03_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Sep 06 18:26:48 2020 UTC <herzs@ip-10-1-3-182>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week03_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Sep 06 20:41:59 2020 UTC <herzs@ip-10-1-3-34>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week03_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% loading in the data...
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*(2*pi)*(1/60);
+% determining time constant...
+y0 = omega_turb(1);
+yss = omega_turb(end);
+ytau = 0.632*(yss-y0);
+tau = time(find(omega_turb<ytau,1,'last'))
+% solving for R...
+J = 4250;
+B = 2000;
+D = 1.0;
+R = (J-tau*B)/(tau*D^2) % see derivation of this equation below
+% plot model against experimental data...
+omega_model = ((D.*P_pen)./(B+R*D^2)).*(1-exp(-time./tau)) + y0*exp(-time./tau);
+% omega_model = yss*(1-exp(-time./(J/(B+R*D^2))));
+figure
+hold on;
+plot(time,omega_turb,'b.')
+plot(time,omega_model,'r')
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (\Omega)')
+title('Comparison of First Order Model to Experimental Data of Dam System')
+legend('Experimental','Model','Location','southeast')
+hold off;
+_make_figures("/tmp/tmp6rvrfd9v", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+y0 = omega_turb(1);
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J))*time)) + y0*exp(-((B+R*D^2)/(J))*time));
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb)
+omega_model = fun(R_fit,time);
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model)
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (\Omega)')
+title('Comparison of First Order Model to Experimental Data of Dam System')
+legend('Experimental','Model','Location','southeast')
+hold off;
+_make_figures("/tmp/tmp86svzncp", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+tau = 0.30005;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+y0 = omega_turb(1);
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-time./tau)) + y0*exp(-time./tau);
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb);
+omega_model = fun(R_fit,time);
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model)
+hold off
+_make_figures("/tmp/tmph5i4qny_", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+y0 = omega_turb(1);
+% determine tau...
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time) + y0*exp(-((B+R*D^2)/(J)).*time);
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb);
+omega_model = fun(R_fit,time);
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model)
+hold off
+_make_figures("/tmp/tmpw3joeyen", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+y0 = omega_turb(1);
+% determine tau...
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time)) + y0*exp(-((B+R*D^2)/(J)).*time);
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb);
+omega_model = fun(R_fit,time);
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model)
+hold off
+_make_figures("/tmp/tmptktnyqj2", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+y0 = omega_turb(1);
+% determine tau...
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time)) + y0*exp(-((B+R*D^2)/(J)).*time);
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb);
+omega_model = fun(R_fit,time);
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model,'r')
+hold off
+_make_figures("/tmp/tmp4pqjf83f", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data(:,1);
+P_pen_diffheight = data(:,3)*1000;
+omega_turb_diffheight = data(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+fun = @(R,time)((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+omega_model_diffheight = fun(R_fit,time_diffheight);
+figure
+hold on
+plot(time,omega_turb_diffheight, 'b.')
+plot(time,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmp5syobdbo", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt')
+time_diffheight = data(:,1);
+P_pen_diffheight = data(:,3)*1000;
+omega_turb_diffheight = data(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+fun = @(R,time)((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+omega_model_diffheight = fun(R_fit,time_diffheight);
+figure
+hold on
+plot(time,omega_turb_diffheight, 'b.')
+plot(time,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmpy8r59diz", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt')
+time_diffheight = data(:,1);
+P_pen_diffheight = data(:,3)*1000;
+omega_turb_diffheight = data(:,4)*2*pi*(1/60)
+y0_diffheight = omega_turb_diffheight(1);
+fun = @(R,time)((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+omega_model_diffheight = fun(R_fit,time_diffheight);
+figure
+hold on
+plot(time,omega_turb_diffheight, 'b.')
+plot(time,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmp_6t82sy5", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data(:,1);
+P_pen_diffheight = data(:,3)*1000;
+omega_turb_diffheight = data(:,4)*2*pi*(1/60)
+y0_diffheight = omega_turb_diffheight(1);
+fun = @(R,time)((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+omega_model_diffheight = fun(R_fit,time_diffheight);
+figure
+hold on
+plot(time,omega_turb_diffheight, 'b.')
+plot(time,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmpfsyfa9jc", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data_diffheight(:,1);
+P_pen_diffheight = data_diffheight(:,3)*1000;
+omega_turb_diffheight = data_diffheight(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+fun = @(R,time)((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+omega_model_diffheight = fun(R_fit,time_diffheight);
+figure
+hold on
+plot(time,omega_turb_diffheight, 'b.')
+plot(time,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmpwbtgfl7e", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data_diffheight(:,1);
+P_pen_diffheight = data_diffheight(:,3)*1000;
+omega_turb_diffheight = data_diffheight(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+_make_figures("/tmp/tmplkkd51dn", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data_diffheight(:,1);
+P_pen_diffheight = data_diffheight(:,3)*1000;
+omega_turb_diffheight = data_diffheight(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+omega_model_diffheight = ((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+figure
+hold on
+plot(time_diffheight,omega_turb_diffheight, 'b.')
+plot(time_diff_height,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmpulf0zgqj", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data_diffheight(:,1);
+P_pen_diffheight = data_diffheight(:,3)*1000;
+omega_turb_diffheight = data_diffheight(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+omega_model_diffheight = ((D.*P_pen_diffheight)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R*D^2)/(J)).*time_diffheight);
+figure
+hold on
+plot(time_diffheight,omega_turb_diffheight, 'b.')
+plot(time_diffheight,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmpws1oecib", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data_diffheight(:,1);
+P_pen_diffheight = data_diffheight(:,3)*1000;
+omega_turb_diffheight = data_diffheight(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+omega_model_diffheight = ((D.*P_pen_diffheight)./(B+R_fit*D^2)).*(1-exp(-((B+R_fit*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R_fit*D^2)/(J)).*time_diffheight);
+figure
+hold on
+plot(time_diffheight,omega_turb_diffheight, 'b.')
+plot(time_diffheight,omega_model_diffheight,'r')
+hold off
+_make_figures("/tmp/tmprvvyincy", "png", "Figure", -1, -1, 0, 0)
+% angular turbine speed was plotted against pressure at the penstock valve in order to determine 
+% the order of the system...
+data = load('damdata25_disconnected.txt');
+t = data(:,1);
+omega_turb = data(:,4)*2*pi*(1/60);
+figure
+plot(t,omega_turb)
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+title('Change in Turbine Angular Speed over Time')
+% this plot clearly shows that the system is first order and thus will be modeled as first order
+_make_figures("/tmp/tmpkzbgmc8u", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+y0 = omega_turb(1);
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time)) + y0*exp(-((B+R*D^2)/(J)).*time);
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb)
+omega_model = fun(R_fit,time);
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model,'r')
+hold off
+_make_figures("/tmp/tmpeqyvfb_r", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sun Sep 06 23:26:51 2020 UTC <herzs@ip-10-1-3-157>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week03_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Mon Sep 07 01:11:40 2020 UTC <herzs@ip-10-1-3-50>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week03_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% Data was collected with a valve opening of 25% in order to analyze the behavior of the dam system and determine it's order
+data = load('damdata25_disconnected.txt');
+t = data(:,1);
+omega_turb = data(:,4)*2*pi*(1/60);
+figure
+plot(t,omega_turb)
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+title('Change in Turbine Angular Speed over Time')
+% this plot clearly shows that the system is first order and thus will be modeled as first order
+_make_figures("/tmp/tmp2tj_3glb", "png", "Figure", -1, -1, 0, 0)
+D = 1;
+B = 2000;
+J = 4250;
+data = load('damdata50_disconnected.txt');
+time = data(:,1);
+P_pen = data(:,3)*1000;
+omega_turb = data(:,4)*2*pi*(1/60);
+% determining R...
+y0 = omega_turb(1);
+p_guess = 1 ;
+fun = @(R,time)((D.*P_pen)./(B+R*D^2)).*(1-exp(-((B+R*D^2)/(J)).*time)) + y0*exp(-((B+R*D^2)/(J)).*time);
+R_fit = lsqcurvefit(fun, p_guess, time, omega_turb)
+omega_model = fun(R_fit,time);
+% plotting model against experimental data
+figure
+hold on
+plot(time,omega_turb, 'b.')
+plot(time,omega_model,'r')
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+title('Comparison of Experimental Data to First-Order Model of Dam System')
+legend('Experimental','Model','Location','southeast')
+hold off
+_make_figures("/tmp/tmpaiakj7le", "png", "Figure", -1, -1, 0, 0)
+data_diffheight = load('damdata50_diffheight.txt');
+time_diffheight = data_diffheight(:,1);
+P_pen_diffheight = data_diffheight(:,3)*1000;
+omega_turb_diffheight = data_diffheight(:,4)*2*pi*(1/60);
+y0_diffheight = omega_turb_diffheight(1);
+omega_model_diffheight = ((D.*P_pen_diffheight)./(B+R_fit*D^2)).*(1-exp(-((B+R_fit*D^2)/(J)).*time_diffheight)) + y0_diffheight*exp(-((B+R_fit*D^2)/(J)).*time_diffheight);
+figure
+hold on
+plot(time_diffheight,omega_turb_diffheight, 'b.')
+plot(time_diffheight,omega_model_diffheight,'r')
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+title('Comparison of Experimental Data to First-Order Model of Dam System at Different Starting Height')
+legend('Experimental','Model','Location','southeast')
+hold off
+_make_figures("/tmp/tmp7xu6x_it", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Mon Sep 07 02:25:58 2020 UTC <herzs@ip-10-1-3-121>

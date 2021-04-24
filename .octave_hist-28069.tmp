@@ -1,0 +1,1000 @@
+-22.67
+-21.40
+-22.66
+-22.67
+-22.67
+-22.67
+-22.66
+-22.69
+-22.66
+-22.66
+-22.69
+-22.66
+-22.66
+-22.68
+-22.66
+-22.67
+-21.40
+-23.94
+-21.38
+-23.97
+-22.66
+-22.66
+-22.69
+-22.66
+-22.66
+-22.69
+-22.66
+-23.95
+-22.69
+-22.66
+-22.66
+-22.68
+-22.67
+-22.66
+-23.97
+-22.67
+-22.66
+-22.68
+-22.66
+-22.67
+-23.97
+-22.66
+-22.66
+-22.68
+-22.67
+-23.94
+-22.69
+-22.67
+-22.66
+-22.68
+-23.95
+-22.66
+-22.70
+-22.66
+-22.66
+-23.97
+-22.66
+-22.66
+-22.65
+-22.71
+-21.19
+];
+maxval = min(data)
+_make_figures("/tmp/tmpsu3h5gjm", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Sep 11 01:56:37 2020 UTC <herzs@ip-10-1-3-66>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week04_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Fri Sep 11 06:23:50 2020 UTC <herzs@ip-10-1-3-186>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week04_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+clear all
+%set up laplace s
+s = tf('s');
+%set up TF
+T = (s+2)/(s^2+2*s+10);
+%simulate TF response to a UNIT impulse
+[y,t] = impulse(T);
+%scale response by magnitude of input
+y = 10*y;
+%offset response to account for initial U and initial Y that had the system at a prior steady state value of 1.
+y = y+1;
+figure()
+plot(t,y,'k')
+xlabel('Time (s)')
+ylabel('System Response (quarks)')
+_make_figures("/tmp/tmp4iabyst7", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmp41wru6id", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sat Sep 12 15:57:53 2020 UTC <herzs@ip-10-1-3-238>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week04_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Sep 13 15:03:06 2020 UTC <herzs@ip-10-1-3-220>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week04_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F));
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C));
+%simulate TF response to a UNIT impulse
+[yr,t] = step(Tr);
+[yw,t] = impulse(Tw);
+yw = yw*0.01;
+ytot = yw+yr;
+figure()
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('System Response (quarks)')
+_make_figures("/tmp/tmpyjj4q_tl", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F));
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C));
+%simulate TF response to a UNIT impulse
+[yr,t] = step(Tr,5);
+[yw,t] = impulse(Tw,5);
+yw = yw*0.01;
+ytot = yw+yr;
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('System Response (quarks)')
+hold off;
+_make_figures("/tmp/tmpi4h7pcqn", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F));
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C));
+%simulate TF response to a UNIT impulse
+[yr,t] = step(Tr,2);
+[yw,t] = impulse(Tw,2);
+yw = yw*0.01;
+ytot = yw+yr;
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('System Response (quarks)')
+hold off;
+_make_figures("/tmp/tmp73u3ajal", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sun Sep 13 19:07:56 2020 UTC <herzs@ip-10-1-3-139>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week04_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Sep 13 22:57:54 2020 UTC <herzs@ip-10-1-3-98>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week04_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location','southeast')
+hold off;
+_make_figures("/tmp/tmpurabi_xv", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location','south')
+hold off;
+_make_figures("/tmp/tmpha5a1tn8", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location',[10 10])
+hold off;
+_make_figures("/tmp/tmp4unsnrij", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location',[10 5])
+hold off;
+_make_figures("/tmp/tmpqgdbk4n2", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location',[10 5])
+hold off;
+_make_figures("/tmp/tmp566pcvuc", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location','best')
+hold off;
+_make_figures("/tmp/tmpw6t5unqj", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+%set up TF
+C = 10;
+G = (1/(s+1));
+H = 1;
+F = 1;
+Tr = (G*(C+F))/(1+(H*G)*(C+F)); % transfer function for input r(s)
+Tw = -(H*G*(C+F))/(1+(H*G)*(F+C)); % transfer function for input w(s)
+% output...
+[yr,t] = step(Tr,1); % with r(s) input
+[yw,t] = impulse(Tw,1); % with w(s) input
+yw = yw*0.01;
+ytot = yw+yr; % total output
+% plotting...
+figure()
+hold on;
+plot(t,yr,'b')
+plot(t,yw,'r')
+plot(t,ytot,'k')
+xlabel('Time (s)')
+ylabel('Output y(s)')
+legend('r(s)','w(s)','total','location','southeastoutside')
+hold off;
+_make_figures("/tmp/tmpaw1rxf7r", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Mon Sep 14 02:13:08 2020 UTC <herzs@ip-10-1-3-50>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week05_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+data = load('damdata_pcontroller.txt');
+Pin = data(1,3)*1000;
+tnl = data(:,1);
+ynl = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+%simulation parameters
+simtime = 5;
+dt = .001;
+%simulation time vector-- we can make it common between both nonlinear and linear models
+t = 0:dt:simtime;
+%set up input situation
+ubar = 40;
+du = 10;
+%set up the input vector for TOTAL input u = ubar + du
+duvec = du*ones(size(t));
+u = (ubar+du)*ones(size(t));
+%set up the initial conditions. Use the NOP equations to set them!
+ybar = (D*Pin(1))/(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar));
+%set up variables for the linear simulation. INCREMENTAL variables!!
+Dyl = zeros(size(t)); % y for linear
+Dydl = zeros(size(t)); %ydot for linear
+%set up the initial conditions. Use the NOP equations to set them!
+% For linearized, we are using Delta y, so the IC is 0!!
+Dyl(1) = 0;
+Dydl(1) = 0;
+%perform Euler Integration for the LINEARIZED model
+for k = 2:length(t)
+    %highest derivative is a function of the others
+    Dydl(k) = (1/J)*((-b-(D^2*Rnom)+(0.01*D^2*Rnom*ubar))*Dyl(k-1)+(0.01*D^2*Rnom*ybar*duvec(k-1)));
+    %y can be integrated using the previous value of ydot.
+    Dyl(k) = Dyl(k-1) + dt*Dydl(k);
+end
+%shift linearized model up to start at NOP!
+yl = Dyl + ybar;
+% plot the results to see agreement!!
+hold on;
+plot(tnl,ynl,'.')
+plot(t,yl)
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+legend('Nonlinear Data','Linearized Model','location','southeast')
+hold off;
+_make_figures("/tmp/tmpf7pd59c4", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_lin.txt');
+Pin = data(1,3)*1000;
+tnl = data(:,1);
+ynl = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+%simulation parameters
+simtime = 5;
+dt = .001;
+%simulation time vector-- we can make it common between both nonlinear and linear models
+t = 0:dt:simtime;
+%set up input situation
+ubar = 40;
+du = 10;
+%set up the input vector for TOTAL input u = ubar + du
+duvec = du*ones(size(t));
+u = (ubar+du)*ones(size(t));
+%set up the initial conditions. Use the NOP equations to set them!
+ybar = (D*Pin(1))/(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar));
+%set up variables for the linear simulation. INCREMENTAL variables!!
+Dyl = zeros(size(t)); % y for linear
+Dydl = zeros(size(t)); %ydot for linear
+%set up the initial conditions. Use the NOP equations to set them!
+% For linearized, we are using Delta y, so the IC is 0!!
+Dyl(1) = 0;
+Dydl(1) = 0;
+%perform Euler Integration for the LINEARIZED model
+for k = 2:length(t)
+    %highest derivative is a function of the others
+    Dydl(k) = (1/J)*((-b-(D^2*Rnom)+(0.01*D^2*Rnom*ubar))*Dyl(k-1)+(0.01*D^2*Rnom*ybar*duvec(k-1)));
+    %y can be integrated using the previous value of ydot.
+    Dyl(k) = Dyl(k-1) + dt*Dydl(k);
+end
+%shift linearized model up to start at NOP!
+yl = Dyl + ybar;
+% plot the results to see agreement!!
+hold on;
+plot(tnl,ynl,'.')
+plot(t,yl)
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+legend('Nonlinear Data','Linearized Model','location','southeast')
+hold off;
+_make_figures("/tmp/tmpf0ftph1a", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpb9di2zc_", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpq0tqcb6a", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpwvwwmq0n", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 57.6113;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpnhvazho6", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp8uvtk61r", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp9vk050zm", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987+2;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmphurjbqmd", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpx2ntl23w", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpt_e_h0tq", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =25.605;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp5gw3ba4z", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =36.2738;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+xlim([0 3]);
+ylim([0 13]);
+hold off;
+_make_figures("/tmp/tmpn8eteny_", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+xlim([0 3]);
+ylim([0 13]);
+hold off;
+_make_figures("/tmp/tmpj6q9fhu9", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpotc3kklu", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp0hoizf1_", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmprc4ed8xh", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+time = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,time);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpufswnqy4", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Sep 16 19:10:39 2020 UTC <herzs@ip-10-1-3-199>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week05_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+s = tf('s');
+t = 0:.001:1.5;%go a little past where we said the system should be at steady state
+G1 = 1/(s+1);
+Kp = 4;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+figure
+plot(tsim,ysim,'k')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+_make_figures("/tmp/tmpl7cxuo0f", "png", "Figure", -1, -1, 0, 0)
+%create our TF from e to y
+G_e_y = (s+1)/(s+5);
+%now see how it responds to a step input
+[yey,tey] = step(G_e_y,t);
+figure
+plot(t,yey,'k')
+xlabel('Time (s)')
+ylabel('tracking error')
+_make_figures("/tmp/tmpuv0_fobg", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_lin.txt');
+Pin = data(1,3)*1000;
+tnl = data(:,1);
+ynl = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+%simulation parameters
+simtime = 5;
+dt = .001;
+%simulation time vector-- we can make it common between both nonlinear and linear models
+t = 0:dt:simtime;
+%set up input situation
+ubar = 40;
+du = 10;
+%set up the input vector for TOTAL input u = ubar + du
+duvec = du*ones(size(t));
+u = (ubar+du)*ones(size(t));
+%set up the initial conditions. Use the NOP equations to set them!
+ybar = (D*Pin(1))/(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar));
+%set up variables for the linear simulation. INCREMENTAL variables!!
+Dyl = zeros(size(t)); % y for linear
+Dydl = zeros(size(t)); %ydot for linear
+%set up the initial conditions. Use the NOP equations to set them!
+% For linearized, we are using Delta y, so the IC is 0!!
+Dyl(1) = 0;
+Dydl(1) = 0;
+%perform Euler Integration for the LINEARIZED model
+for k = 2:length(t)
+    %highest derivative is a function of the others
+    Dydl(k) = (1/J)*((-b-(D^2*Rnom)+(0.01*D^2*Rnom*ubar))*Dyl(k-1)+(0.01*D^2*Rnom*ybar*duvec(k-1)));
+    %y can be integrated using the previous value of ydot.
+    Dyl(k) = Dyl(k-1) + dt*Dydl(k);
+end
+%shift linearized model up to start at NOP!
+yl = Dyl + ybar;
+% plot the results to see agreement!!
+hold on;
+plot(tnl,ynl,'.')
+plot(t,yl)
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+legend('Nonlinear Data','Linearized Model','location','southeast')
+hold off;
+_make_figures("/tmp/tmpwlsj7skx", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt'); % loading collected data 
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the model
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987; % steady state angular speed (from last week's assignment)
+ubar = 40; 
+% P Controller Model...
+s = tf('s');
+time = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =36.2738;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,time);
+ysim= (2*ysim)+omegabar; % multiplying by 2 because we're increasing by 2 rad/s and adding turbine's previous steady state value when valve was open 40%
+% plotting...
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+plot(t,ones(length(t))*12.987,'k--')
+xlabel('Time (s)')
+ylabel('Turbine Angular Speed (rad/s)')
+title('Comparison of P-Controller Model to Experimental Data from Dam System')
+legend('P-Controller Model','Experimental','Desired','location','southeast')
+hold off;
+_make_figures("/tmp/tmpam8b4oda", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Sep 16 20:24:43 2020 UTC <herzs@ip-10-1-3-16>

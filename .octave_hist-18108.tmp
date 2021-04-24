@@ -1,0 +1,1000 @@
+%plot(tsim2,ymodel2)
+%hold off;
+_make_figures("/tmp/tmpx1kyvu1j", "png", "Figure", -1, -1, 0, 0)
+% loading data
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6;
+Vs_load = data_load(:,3);
+V0 = Vs_load(1);
+startIndex_load = find(Vs_load>V0,1,'first')
+tstart_load = time_load(startIndex_load);
+lastIndex_load = find(time_load-tstart_load>0.5,1,'first')
+Vin_load = Vs_load(startIndex_load)
+omega_load = data_load(:,4);
+omega0_load = mean(omega_load(1:20))
+omegass_load = mean(omega_load(end-20:end))
+omega_trimmed = omega_load(startIndex_load:end);
+time = time_load(startIndex_load:end)-tstart_load;
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load;
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0)
+% plotting model against experimental data...
+s = tf('s');
+timevec = linspace(0,time(end),length(time));
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim,tsim]=step(GH_load1,time(startIndex_load:end));
+ymodel = ((Vin_load-V0)*ysim)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim,ymodel)
+title('Comparison of Plant Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off
+% subtracting first order piece off of third order system...
+omega2 = omega_trimmed - ymodel;
+B = 0.117;
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim2,tsim2]=step(GH_load2,time(startIndex_load:end));
+ymodel2 = ((Vin_load-V0)*ysim2);
+plot(tsim2,ymodel2)
+xlim([0 0.5])
+figure
+hold on;
+plot(time,omega2)
+_make_figures("/tmp/tmpm8n9bs10", "png", "Figure", -1, -1, 0, 0)
+% loading data
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6;
+Vs_load = data_load(:,3);
+V0 = Vs_load(1);
+startIndex_load = find(Vs_load>V0,1,'first')
+tstart_load = time_load(startIndex_load);
+lastIndex_load = find(time_load-tstart_load>0.5,1,'first')
+Vin_load = Vs_load(startIndex_load)
+omega_load = data_load(:,4);
+omega0_load = mean(omega_load(1:20))
+omegass_load = mean(omega_load(end-20:end))
+omega_trimmed = omega_load(startIndex_load:end);
+time = time_load(startIndex_load:end)-tstart_load;
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load;
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0)
+% plotting model against experimental data...
+s = tf('s');
+timevec = linspace(0,time(end),length(time));
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim,tsim]=step(GH_load1,time(startIndex_load:end));
+ymodel = ((Vin_load-V0)*ysim)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim,ymodel)
+title('Comparison of Plant Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off
+% subtracting first order piece off of third order system...
+omega2 = omega_trimmed - ymodel;
+B = 0.117;
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim2,tsim2]=step(GH_load2,time(startIndex_load:end));
+ymodel2 = ((Vin_load-V0)*ysim2);
+figure
+hold on;
+plot(time,omega2)
+plot(tsim2,ymodel2)
+xlim([0 0.5])
+_make_figures("/tmp/tmpzaeof6w1", "png", "Figure", -1, -1, 0, 0)
+tau_desired = 0.025;
+p_CL = -1/tau_desired
+Kp = abs(p_CL + a)/A
+_make_figures("/tmp/tmp1jsgkwh5", "png", "Figure", -1, -1, 0, 0)
+% loading data
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6;
+Vs_load = data_load(:,3);
+V0 = Vs_load(1);
+startIndex_load = find(Vs_load>V0,1,'first')
+tstart_load = time_load(startIndex_load);
+lastIndex_load = find(time_load-tstart_load>0.5,1,'first')
+Vin_load = Vs_load(startIndex_load)
+omega_load = data_load(:,4);
+omega0_load = mean(omega_load(1:20))
+omegass_load = mean(omega_load(end-20:end))
+omega_trimmed = omega_load(startIndex_load:end);
+time = time_load(startIndex_load:end)-tstart_load;
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load;
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0)
+% plotting model against experimental data...
+s = tf('s');
+timevec = linspace(0,time(end),length(time));
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim,tsim]=step(GH_load1,time(startIndex_load:end));
+ymodel = ((Vin_load-V0)*ysim)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim,ymodel)
+title('Comparison of Plant Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+% subtracting first order piece off of third order system...
+omega2 = omega_trimmed - ymodel;
+B = 0.117;
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim2,tsim2]=step(GH_load2,time(startIndex_load:end));
+ymodel2 = ((Vin_load-V0)*ysim2);
+plot(tsim2,ymodel2)
+GH_load = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim3,tsim3]=step(GH_load,time(startIndex_load:end));
+ymodel3 = ((Vin_load-V0)*ysim3);
+PLOT(tsim3,ymodel3)
+_make_figures("/tmp/tmpyceylidx", "png", "Figure", -1, -1, 0, 0)
+% loading data
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6;
+Vs_load = data_load(:,3);
+V0 = Vs_load(1);
+startIndex_load = find(Vs_load>V0,1,'first')
+tstart_load = time_load(startIndex_load);
+lastIndex_load = find(time_load-tstart_load>0.5,1,'first')
+Vin_load = Vs_load(startIndex_load)
+omega_load = data_load(:,4);
+omega0_load = mean(omega_load(1:20))
+omegass_load = mean(omega_load(end-20:end))
+omega_trimmed = omega_load(startIndex_load:end);
+time = time_load(startIndex_load:end)-tstart_load;
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load;
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0)
+% plotting model against experimental data...
+s = tf('s');
+timevec = linspace(0,time(end),length(time));
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim,tsim]=step(GH_load1,time(startIndex_load:end));
+ymodel = ((Vin_load-V0)*ysim)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim,ymodel)
+title('Comparison of Plant Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+% subtracting first order piece off of third order system...
+omega2 = omega_trimmed - ymodel;
+B = 0.117;
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim2,tsim2]=step(GH_load2,time(startIndex_load:end));
+ymodel2 = ((Vin_load-V0)*ysim2);
+plot(tsim2,ymodel2)
+GH_load = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim3,tsim3]=step(GH_load,time(startIndex_load:end));
+ymodel3 = ((Vin_load-V0)*ysim3);
+plot(tsim3,ymodel3)
+_make_figures("/tmp/tmp5ka5rrt_", "png", "Figure", -1, -1, 0, 0)
+% loading data
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6;
+Vs_load = data_load(:,3);
+V0 = Vs_load(1);
+startIndex_load = find(Vs_load>V0,1,'first')
+tstart_load = time_load(startIndex_load);
+lastIndex_load = find(time_load-tstart_load>0.5,1,'first')
+Vin_load = Vs_load(startIndex_load)
+omega_load = data_load(:,4);
+omega0_load = mean(omega_load(1:20))
+omegass_load = mean(omega_load(end-20:end))
+omega_trimmed = omega_load(startIndex_load:end);
+time = time_load(startIndex_load:end)-tstart_load;
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load;
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0)
+% plotting model against experimental data...
+s = tf('s');
+timevec = linspace(0,time(end),length(time));
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim,tsim]=step(GH_load1,time(startIndex_load:end));
+ymodel = ((Vin_load-V0)*ysim)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim,ymodel)
+title('Comparison of Plant Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+% subtracting first order piece off of third order system...
+omega2 = omega_trimmed - ymodel;
+B = 0.117;
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim2,tsim2]=step(GH_load2,time(startIndex_load:end));
+ymodel2 = ((Vin_load-V0)*ysim2);
+plot(tsim2,ymodel2)
+GH_load = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % first order piece of third order system
+[ysim3,tsim3]=step(GH_load,time(startIndex_load:end));
+ymodel3 = ((Vin_load-V0)*ysim3)+omega0_load;
+plot(tsim3,ymodel3)
+_make_figures("/tmp/tmp409ym8dm", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+PWM_CL_load = dataCL_load(:,5);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,5);
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ysimCL_load*desiredSpeed_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off;
+_make_figures("/tmp/tmp3byo1gz8", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+PWM_CL_load = dataCL_load(:,5);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,5);
+ymodelCL_load = ((desiredSpeed_load-omegad0_load)*ysimCL_load)+omegad0_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off;
+_make_figures("/tmp/tmpfunohfn2", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,5);
+ymodelCL_load = ((desiredSpeed_load-omegad0_load)*ysimCL_load)+omegad0_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off;
+_make_figures("/tmp/tmpyuxnk3oy", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,5);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omegad0_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off;
+_make_figures("/tmp/tmpdxsybyes", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,5);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omegad0_CL_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+hold off;
+_make_figures("/tmp/tmpvt0xhfs7", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,2);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omegad0_CL_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 2])
+ylim([15 45])
+hold off;
+_make_figures("/tmp/tmpz8jirwku", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'))
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,2);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omegad0_CL_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 2])
+ylim([15 45])
+hold off;
+_make_figures("/tmp/tmplzvjk9sw", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,2);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omegad0_CL_load;
+GH_CL_load_3 = (Kp*GH_load)/(1+(Kp*GH_load));
+[ysimCL_load3,tsimCL_load3]=step(GH_CL_load3,2);
+ymodelCL_load3 = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load3)+omegad0_CL_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+plot(tsimCL_load3,ymodelCL_load3)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 2])
+ylim([15 45])
+hold off;
+_make_figures("/tmp/tmp3m7m3ii4", "png", "Figure", -1, -1, 0, 0)
+% loading data
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6;
+omegad_CL_load = dataCL_load(:,2);
+omegad0_CL_load = omegad_CL_load(1);
+omega_CL_load = dataCL_load(:,3);
+VsCL_load = dataCL_load(:,4);
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first'));
+% model...
+GH_CL_load = (Kp*GH_load1)/(1+(Kp*GH_load1));
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,2);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omegad0_CL_load;
+GH_CL_load3 = (Kp*GH_load)/(1+(Kp*GH_load));
+[ysimCL_load3,tsimCL_load3]=step(GH_CL_load3,2);
+ymodelCL_load3 = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load3)+omegad0_CL_load;
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+plot(tsimCL_load3,ymodelCL_load3)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 2])
+ylim([15 45])
+hold off;
+_make_figures("/tmp/tmp4obu6246", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Oct 14 16:15:57 2020 UTC <herzs@ip-10-1-3-150>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_5");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% loading data...
+data_unload = load('StepResponse_Unweighted.txt');
+time_unload = data_unload(:,1)*10^-6; % time (s)
+Vs_unload = data_unload(:,3); % input voltage (V)
+V0_unload = Vs_unload(1); % initial input voltage (V)
+Vin_unload = Vs_unload(find(Vs_unload>V0_unload,1,'first')); % magnitude of input voltage after step (V)
+Vstep_unload = Vin_unload - V0_unload; % magnitude of voltage step 
+omega_unload = data_unload(:,4); % angular velocity (rad/s)
+omega0_unload = omega_unload(1) % initial angular velocity (rad/s)
+omegass_unload = mean(omega_unload(end-20:end)) % final steady state angular velocity (rad/s)
+% finding time constant (tau)...
+omegatau_unload = (0.632*(omegass_unload - omega0_unload))+omega0_unload;
+tstart_unload = time_unload(find(Vs_unload>V0_unload,1,'first'));
+tau_unload = time_unload(find(omega_unload<omegatau_unload,1,'last'))-tstart_unload
+a = 1/tau_unload
+A = ((omegass_unload - omega0_unload)*a)/(Vstep_unload)
+% plotting model against experimental data...
+s = tf('s');
+GH_unload = A/(s+a)
+[ysim_unload,tsim_unload]=step(GH_unload,time_unload(end)-tstart_unload);
+ymodel_unload = (Vstep_unload*ysim_unload)+omega0_unload;
+% plotting experimental data vs. the plant model...
+figure
+hold on;
+plot(time_unload-tstart_unload,omega_unload)
+plot(tsim_unload,ymodel_unload)
+title('Comparison of Plant Model to Experimental Data for the Motor Alone')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 3])
+hold off
+_make_figures("/tmp/tmpidegj7lg", "png", "Figure", -1, -1, 0, 0)
+taud_unload = tau_unload/3 % desired time constant
+pCL_unload = -1/taud_unload;
+Kp_unload = abs(pCL_unload + a)/A
+_make_figures("/tmp/tmpsf7syl2s", "png", "Figure", -1, -1, 0, 0)
+% loading data...
+dataCL_unload = load('StepResponse_UnweightedCL.txt');
+timeCL_unload = dataCL_unload(:,1)*10^-6; % time (s)
+omegadCL_unload = dataCL_unload(:,2); % desired angular speed (rad/s)
+omegadCL0_unload = omegadCL_unload(1); % initial desired angular speed (rad/s)
+omegaCL_unload = dataCL_unload(:,3); % actual angular speed (rad/s)
+VsCL_unload = dataCL_unload(:,5); % input voltage (V)
+PWMCL_unload = dataCL_unload(:,4); % PWM counts 
+tstartCL_unload = timeCL_unload(find(omegadCL_unload>omegadCL0_unload,1,'first')); % time at which step is applied (s)
+desiredSpeed_unload = omegadCL_unload(find(omegadCL_unload>omegadCL0_unload,1,'first')); % final desired angular speed (rad/s)
+% controller model...
+GHCL_unload = (Kp_unload*GH_unload)/(1+(Kp_unload*GH_unload));
+[ysimCL_unload,tsimCL_unload]=step(GHCL_unload,timeCL_unload(end)-tstartCL_unload);
+ymodelCL_unload = ((desiredSpeed_unload - omegadCL0_unload)*ysimCL_unload) + omegaCL_unload(1);
+% plotting...
+figure
+hold on;
+plot(timeCL_unload-tstartCL_unload,omegaCL_unload)
+plot(tsimCL_unload,ymodelCL_unload)
+title('Comparison of Controller Model to Experimental Data for Motor Alone')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 1.5])
+hold off;
+_make_figures("/tmp/tmpx3cd002q", "png", "Figure", -1, -1, 0, 0)
+figure
+plot(timeCL_unload-tstartCL_unload,PWMCL_unload)
+title('PWM Signal Over Time for Motor Alone')
+xlabel('Time (s)')
+ylabel('PWM (counts)')
+xlim([0 1.5])
+ylim([0 255])
+maxPWM = max(PWMCL_unload) % maximum count value written to motor over the course of this experiment
+_make_figures("/tmp/tmp8xu1wiq8", "png", "Figure", -1, -1, 0, 0)
+% loading data...
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6; % time (s)
+Vs_load = data_load(:,3); % voltages (V)
+V0_load = Vs_load(1); % initial voltage (V)
+startIndex_load = find(Vs_load>V0_load,1,'first') % finding index where votlage step occurs
+tstart_load = time_load(startIndex_load); % time where voltage step occurs
+Vin_load = Vs_load(startIndex_load) % magnitude of input voltage after step (V)
+omega_load = data_load(:,4); % angular speed (rad/s)
+omega0_load = mean(omega_load(1:20)); % initial angular speed (rad/s)
+omegass_load = mean(omega_load(end-20:end)); % steady state angular speed after voltage step (rad/s)
+omega_trimmed = omega_load(startIndex_load:end); % trimmed angular speeds to only include after the voltage step
+time_trimmed = time_load(startIndex_load:end)-tstart_load; % trimmed time to only include after the voltage step
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load; 
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load 
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0_load)
+% plotting model against experimental data...
+s = tf('s');
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim_load1,tsim_load1]=step(GH_load1,time_trimmed);
+ymodel_load1 = ((Vin_load-V0_load)*ysim_load1)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim_load1,ymodel_load1)
+title('Comparison of Plant Model to Experimental Data for the Mass-Spring System')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+% subtracting first order piece off of third order system...
+omega2_load = omega_trimmed - ymodel_load1; % second order piece 
+B = 0.117; % this value was determined through iteration
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % second order piece of third order system
+[ysim_load2,tsim_load2]=step(GH_load2,time_trimmed);
+ymodel_load2 = ((Vin_load-V0_load)*ysim_load2);
+plot(tsim_load2,ymodel_load2)
+GH_load = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % entire third order system...
+[ysim3,tsim3]=step(GH_load,time_load(startIndex_load:end)-tstart_load); 
+ymodel3 = ((Vin_load-V0_load)*ysim3)+omega0_load;
+plot(tsim3,ymodel3)
+hold off;
+_make_figures("/tmp/tmpz1xlp_ni", "png", "Figure", -1, -1, 0, 0)
+taud_load = 0.025; % desired time constant
+pCL_load = -1/taud_load;
+Kp_load = abs(pCL_load + a)/A % proportional gain
+_make_figures("/tmp/tmp4sld7o_i", "png", "Figure", -1, -1, 0, 0)
+% loading data...
+dataCL_load = load('StepResponse_WeightedCL.txt');
+timeCL_load = dataCL_load(:,1)*10^-6; % time (s)
+omegad_CL_load = dataCL_load(:,2); % desired angular speed (rad/s)
+omegad0_CL_load = omegad_CL_load(1); % initial desired angular speed (rad/s)
+omega_CL_load = dataCL_load(:,3); % actual angular speed (rad/s) 
+VsCL_load = dataCL_load(:,4); % input voltage (V)
+tCL_start_load = timeCL_load(find(omegad_CL_load>omegad0_CL_load,1,'first')); % time where voltage step occurs
+desiredSpeed_load = omegad_CL_load(find(omegad_CL_load>omegad0_CL_load,1,'first')); % final desired speed (rad/s)
+% controller model...
+GH_CL_load = (Kp_load*GH_load1)/(1+(Kp_load*GH_load1)); % first order piece
+[ysimCL_load,tsimCL_load]=step(GH_CL_load,2);
+ymodelCL_load = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load)+omega_CL_load(1);
+GH_CL_load3 = (Kp_load*GH_load)/(1+(Kp_load*GH_load)); % entire third order system
+[ysimCL_load3,tsimCL_load3]=step(GH_CL_load3,2);
+ymodelCL_load3 = ((desiredSpeed_load-omegad0_CL_load)*ysimCL_load3)+omega_CL_load(1);
+% plotting...
+figure
+hold on;
+plot(timeCL_load-tCL_start_load,omega_CL_load)
+plot(tsimCL_load,ymodelCL_load)
+plot(tsimCL_load3,ymodelCL_load3)
+title('Comparison of Controller Model to Experimental Data')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+xlim([0 1])
+ylim([15 45])
+hold off;
+_make_figures("/tmp/tmp8xlv3kua", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Oct 14 23:59:02 2020 UTC <herzs@ip-10-1-3-150>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_6");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% loading data...
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6; % time (s)
+Vs_load = data_load(:,3); % voltages (V)
+V0_load = Vs_load(1); % initial voltage (V)
+startIndex_load = find(Vs_load>V0_load,1,'first'); % finding index where votlage step occurs
+tstart_load = time_load(startIndex_load); % time where voltage step occurs
+Vin_load = Vs_load(startIndex_load); % magnitude of input voltage after step (V)
+omega_load = data_load(:,4); % angular speed (rad/s)
+omega0_load = mean(omega_load(1:20)) % initial angular speed (rad/s)
+omegass_load = mean(omega_load(end-20:end)) % steady state angular speed after voltage step (rad/s)
+omega_trimmed = omega_load(startIndex_load:end); % trimmed angular speeds to only include after the voltage step
+time_trimmed = time_load(startIndex_load:end)-tstart_load; % trimmed time to only include after the voltage step
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load; 
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load 
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0_load)
+% plotting model against experimental data...
+s = tf('s');
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim_load1,tsim_load1]=step(GH_load1,time_trimmed);
+ymodel_load1 = ((Vin_load-V0_load)*ysim_load1)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim_load1,ymodel_load1)
+title('Comparison of Plant Model to Experimental Data for the Mass-Spring System')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+% subtracting first order piece off of third order system...
+omega2_load = omega_trimmed - ymodel_load1; % second order piece 
+B = 0.117; % this value was determined through iteration
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % second order piece of third order system
+[ysim_load2,tsim_load2]=step(GH_load2,time_trimmed);
+ymodel_load2 = ((Vin_load-V0_load)*ysim_load2);
+plot(tsim_load2,ymodel_load2)
+GH_load = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % entire third order system...
+[ysim3,tsim3]=step(GH_load,time_load(startIndex_load:end)-tstart_load); 
+ymodel3 = ((Vin_load-V0_load)*ysim3)+omega0_load;
+plot(tsim3,ymodel3)
+legend('Experimental Data','First Order Piece','Second Order Piece','Third Order Plant Model','location','southeast')
+hold off;
+_make_figures("/tmp/tmpuhr7upta", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Oct 15 17:53:54 2020 UTC <herzs@ip-10-1-3-150>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week09_Wednesday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+%%octave
+s = tf('s');
+H = 1;
+P = 66.64/(s+5.952);
+Ksum = 1;
+Ki = 13.508;
+Kp = 0.360693;
+z = 37.5;
+C = Ksum*(Kp+Ki/s);
+G_closedloop = C*P/(1+C*P*H);
+Pclosedloop = (66.64*(s+z))/(s*(s+5.952));
+figure()
+rlocus(P_cl)
+%check eigenvalues
+[num,den] = tfdata(G_closedloop,'v');
+roots(den);
+%magnitude of our step input
+r_mag = 25;
+%simulate step response 
+[y,t] = step(r_mag*G_closedloop);
+%calculate our error signal
+e = r_mag-y;
+%calculate error derivative
+[u_i,t] = lsim(Ki/s,e,t);%this simulates the error signal going through the ki/s transfer function.
+%calculate control voltage from each piece (proportional, derivative)
+u_p = Kp*e;
+u_total = Ksum*(u_p+u_i);
+%plot our results
+figure()
+plot(t,y,'k')
+xlabel('Time (s)')
+ylabel('Angular Speed (rad/s)')
+figure()
+plot(t,u_p,t,u_i,t,u_total)
+legend('proportional','integral','total')
+xlabel('Time (s)')
+ylabel('Control Signal (V)')
+_make_figures("/tmp/tmp6_bdi9im", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sun Oct 18 01:21:47 2020 UTC <herzs@ip-10-1-3-152>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Exam_1");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Sun Oct 18 12:54:35 2020 UTC <herzs@ip-10-1-3-152>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_6");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+plot(tsim1,ysim1)
+_make_figures("/tmp/tmpvsaj3nhe", "png", "Figure", -1, -1, 0, 0)
+% loading data...
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6; % time (s)
+Vs_load = data_load(:,3); % voltages (V)
+V0_load = Vs_load(1); % initial voltage (V)
+startIndex_load = find(Vs_load>V0_load,1,'first'); % finding index where votlage step occurs
+tstart_load = time_load(startIndex_load); % time where voltage step occurs
+Vin_load = Vs_load(startIndex_load); % magnitude of input voltage after step (V)
+omega_load = data_load(:,4); % angular speed (rad/s)
+omega0_load = mean(omega_load(1:20)) % initial angular speed (rad/s)
+omegass_load = mean(omega_load(end-20:end)) % steady state angular speed after voltage step (rad/s)
+omega_trimmed = omega_load(startIndex_load:end); % trimmed angular speeds to only include after the voltage step
+time_trimmed = time_load(startIndex_load:end)-tstart_load; % trimmed time to only include after the voltage step
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load; 
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load 
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0_load)
+% plotting model against experimental data...
+s = tf('s');
+GH_load1 = A/(s+a); % first order piece of third order system
+[ysim_load1,tsim_load1]=step(GH_load1,time_trimmed);
+ymodel_load1 = ((Vin_load-V0_load)*ysim_load1)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim_load1,ymodel_load1)
+title('Comparison of Plant Model to Experimental Data for the Mass-Spring System')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+% subtracting first order piece off of third order system...
+omega2_load = omega_trimmed - ymodel_load1; % second order piece 
+B = 0.117; % this value was determined through iteration
+wn = 37.9556;
+zeta = 0.057257;
+GH_load2 = (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % second order piece of third order system
+[ysim_load2,tsim_load2]=step(GH_load2,time_trimmed);
+ymodel_load2 = ((Vin_load-V0_load)*ysim_load2);
+plot(tsim_load2,ymodel_load2)
+GH_load = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % entire third order system...
+[ysim3,tsim3]=step(GH_load,time_load(startIndex_load:end)-tstart_load); 
+ymodel3 = ((Vin_load-V0_load)*ysim3)+omega0_load;
+plot(tsim3,ymodel3)
+legend('Experimental Data','First Order Piece','Second Order Piece','Third Order Plant Model','location','southeast')
+hold off;
+_make_figures("/tmp/tmpwaj5xgoz", "png", "Figure", -1, -1, 0, 0)
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+plot(tsim1,ysim1)
+_make_figures("/tmp/tmp85ge1t7b", "png", "Figure", -1, -1, 0, 0)
+GH1 = A/(s+a) % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+plot(tsim1,ysim1)
+_make_figures("/tmp/tmpc1e5jjnz", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0;
+tau = tsim1(find(ysim1<ytau,1,'last'));
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpxh1dbj_b", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0;
+tau = tsim1(find(ysim1<ytau,1,'last'));
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpc9mm3k_z", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+plot(tsim1,ysim1)
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0;
+tau = tsim1(find(ysim1<ytau,1,'last'));
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpr5kykbmr", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0;
+tau = tsim1(find(ysim1<ytau,1,'last'))
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpyx1naw06", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0
+tau = tsim1(find(ysim1<ytau,1,'last'))
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpgbfo89f8", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0
+tau = tsim1(find(ysim1<7.0760,1,'last'))
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmp4mtj3dn8", "png", "Figure", -1, -1, 0, 0)
+% determing desired point (sd) for first order piece under PI control
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0
+tau = tsim1(find(ysim1<10,1,'last'))
+ts = 4*tau; % 2% settling time of first order piece 
+tsd = 0.5*ts; % desired 2% settling time of first order piece
+zetad = 0.707; % desired damping ratio
+wnd = 4/(tsd*zetad); % desired natural frequency
+% desired point (sd) - pair of complex conjugates
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpecvvyh2h", "png", "Figure", -1, -1, 0, 0)
+A = 66.64;
+a = 5.952;
+s = tf('s');
+GH1 = A/(s+a); % first order piece of third order system
+[ysim1,tsim1]=step(GH1,5);
+yss = ysim1(end);
+y0 = ysim1(1);
+ytau = 0.632*(yss-y0)+y0;
+tau = tsim1(find(ysim1<ytau,1,'last'));
+ts = 4*tau; % 2% settling time
+tsd = 0.5*ts; % desired 2% settling time
+zetad = 0.707;
+wnd = 4/(tsd*zetad);
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpc5y_7514", "png", "Figure", -1, -1, 0, 0)
+A = 66.64;
+a = 5.952;
+s = tf('s');
+GH1 = A/(s+a); % first order piece of third order system
+tau = 1/a;
+ts = 4*tau; % 2% settling time
+tsd = 0.5*ts; % desired 2% settling time
+zetad = 0.707;
+wnd = 4/(tsd*zetad);
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j
+_make_figures("/tmp/tmpfo2w5gkl", "png", "Figure", -1, -1, 0, 0)
+z = 15.9;
+K = 0.266;
+Ksum = 1; % assuming Ksum is 1
+Kp = K/Ksum
+Ki = Kp*z
+_make_figures("/tmp/tmpobc59_pp", "png", "Figure", -1, -1, 0, 0)
+z = 15.9; % zero that causes root locus to pass through target point
+K = 0.266; % gain pulled from graph
+Ksum = 1; % assuming Ksum is 1
+Kp = K/Ksum % proportional gain
+Ki = Kp*z % integral gain
+_make_figures("/tmp/tmpojqca27f", "png", "Figure", -1, -1, 0, 0)
+B = 0.117; % this value was determined through iteration
+wn = 37.9556;
+zeta = 0.057257;
+GH3 = A/(s+a)+ (B*wn^2*s)/(s^2+2*zeta*wn*s+wn^2); % entire third order system...
+[ysim,tsim] = step(GH3,5);
+yss = ysim(end);
+[pks,locs]=findpeaks(ysim,tsim); % finding max peaks
+[pks2,locs2]=findpeaks(-ysim,tsim); % finding min peaks
+peak1 = pks(end); % finding last maximum peak
+peak2 = -pks2(end); % finding last minimum peak
+ydiff1 = abs((yss-peak1)/yss)*100; % percent difference of last max peak 
+ydiff2 = abs((yss-peak2)/yss)*100; % percent difference of last min peak
+    if ydiff1 <= 2 || ydiff2 <=2 % if either peak is within 2% of steady state value...
+        for j = length(ysim):-1:1 % starting from last data point and iterating backwards
+            ydiff = abs((yss-ysim(j))/yss)*100; % calculating percent difference
+            if ydiff > 2 % checking if greater than 2%
+                break; % stopping for loop if above 2%
+            end
+        end
+        ts = tsim(j) % 2% settling time (at the index that the for loop was quit at)
+    else
+        disp("Need more data to find settling time!") % displays message if neither peaks are within 2% of steady state value
+    end
+_make_figures("/tmp/tmp3h9pz0ga", "png", "Figure", -1, -1, 0, 0)
+A = 66.64;
+a = 5.952;
+s = tf('s');
+GH1 = A/(s+a); % first order piece of third order system
+tau = 1/a;
+ts = 4*tau; % 2% settling time
+tsd1 = 0.5*ts; % desired 2% settling time for first order piece
+zetad1 = 0.707; % desired damping ratio for the first order piece
+wnd1 = 4/(tsd1*zetad1); % desired natural frequency for the first order piece
+sd1_1 = -(zetad1*wnd1) + wnd1*sqrt(1-zetad1^2)*1j
+sd2_1 = -(zetad1*wnd1) - wnd1*sqrt(1-zetad1^2)*1j
+_make_figures("/tmp/tmpdzno3yhs", "png", "Figure", -1, -1, 0, 0)
+tsd3 = 0.68295; % desired 2% settling time for the third order piece
+zetad3 = 0.707; % desired damping ratio for the third order piece
+wnd3 = 4/(tsd3*zetad3); % desired natural frequency for the third order piece
+sd1_3 = -(zetad3*wnd3) + wnd3*sqrt(1-zetad3^2)*1j
+sd2_3 = -(zetad3*wnd3) - wnd3*sqrt(1-zetad3^2)*1j
+_make_figures("/tmp/tmpvnscpxoi", "png", "Figure", -1, -1, 0, 0)
+z1 = 15.9; % zero that causes root locus to pass through target point
+K1 = 0.266; % gain pulled from graph
+Ksum1 = 1; % assuming Ksum is 1
+Kp1 = K1/Ksum1 % proportional gain
+Ki1 = Kp1*z1 % integral gain
+_make_figures("/tmp/tmpvrq6pcs3", "png", "Figure", -1, -1, 0, 0)
+z2 = 11.2; % zero that causes root locus to pass through target point
+K3 = 0.0983; % gain pulled from graph
+Ksum3 = 1; % assuming Ksum is 1
+Kp3 = K3/Ksum3 % proportional gain
+Ki3 = Kp3*z3 % integral gain
+_make_figures("/tmp/tmp7i45qtg6", "png", "Figure", -1, -1, 0, 0)
+z3 = 11.2; % zero that causes root locus to pass through target point
+K3 = 0.0983; % gain pulled from graph
+Ksum3 = 1; % assuming Ksum is 1
+Kp3 = K3/Ksum3 % proportional gain
+Ki3 = Kp3*z3 % integral gain
+_make_figures("/tmp/tmptciszg18", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Tue Oct 20 12:54:34 2020 UTC <herzs@ip-10-1-3-152>

@@ -1,0 +1,1000 @@
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpk44xo1ud", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Tue Nov 17 23:27:12 2020 UTC <herzs@ip-10-1-3-148>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week14_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% gain margin...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin
+w0 = 9.04996;
+phi = atan2(-w0^3+30*w0,-12*w0^2+100)
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpin7vnds2", "png", "Figure", -1, -1, 0, 0)
+% gain margin...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin
+w0 = 9.04996;
+phi = atand2(-w0^3+30*w0,-12*w0^2+100)
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpsiqq1rd6", "png", "Figure", -1, -1, 0, 0)
+% gain margin...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin
+w0 = 9.04996;
+phi = atan2d(-w0^3+30*w0,-12*w0^2+100)
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpdvu6nsci", "png", "Figure", -1, -1, 0, 0)
+% gain margin...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpw7z3lm5m", "png", "Figure", -1, -1, 0, 0)
+% gain margin...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpwegviibn", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpo7vry_gb", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp9bjmgu_z", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = (5*sqrt(3))/3;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpoyvt0wf9", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = (5*sqrt(3))/3;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp_gbk6bbt", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = (5*sqrt(3))/3;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpxau9vc_k", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = (5*sqrt(3))/3;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = -atan2d(-12*w0^3+100*w0,w0^4-30*w0^2)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmppw85fo1m", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = 3.02111;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)))
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = -atan2d(-12*w0^3+100*w0,w0^4-30*w0^2)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpnhfia65v", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = 3.02111;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = -atan2d(w0^5+210*w0^3-2000*w0,-8*w0^4+500*w0^2)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp28s6t2do", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = 3.02111;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = atan2d(w0^5+210*w0^3-2000*w0,-8*w0^4+500*w0^2)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp06ucg5cw", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = 3.02111;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = -atan2d(w0^5+210*w0^3-2000*w0,(-1000*w0^2)/(-8*w0^4+500*w0^2))
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp2pg4oyl1", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = atan2d(0,1000*(-w0^2-400))-atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp96i2l3vk", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(0,1000*(-w0^2-400))-atan2d(-w0^3+30*w0,-12*w0^2+100);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpsmj_oh8_", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = atan2d(0,1000*(-w0^2-400))-atan2d(-w0^3+30*w0,-12*w0^2+100)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp_ps2vevx", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = -atan2d(-w0^3+30*w0,-12*w0^2+100)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpjcni8wm9", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = 3.02111;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = atan2d(0,1000*(-w0^2-400))-atan2d(w0^5+210*w0^3-2000*w0,-8*w0^4+500*w0^2)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp54tjlbjv", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = sqrt(30);
+GH_mag = abs(1000/((w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 9.04996;
+phi = atan2d(0,1000)-atan2d(-w0^3+30*w0,-12*w0^2+100)
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = 1000/((s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmpcie9wlq2", "png", "Figure", -1, -1, 0, 0)
+% gain margin calculations...
+w = 3.02111;
+GH_mag = abs((1000*(w*1j+20))/((w*1j)*(w*1j+10)*((w*1j)^2+2*w*1j+10)));
+GM = 1/GH_mag
+% phase margin calculations...
+w0 = 11.6906;
+phi = atan2d(0,1000*(-w0^2-400))-atan2d(w0^5+210*w0^3-2000*w0,-8*w0^4+500*w0^2);
+PM = 180+phi
+% checking answers...
+s = tf('s');
+GH = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+margin(GH)
+_make_figures("/tmp/tmp_b1ivhz3", "png", "Figure", -1, -1, 0, 0)
+GH_P = 1000/((s+10)*(s^2+2*s+10));
+rlocus(GH_P)
+GH_PI = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+rlocus(GH_PI)
+_make_figures("/tmp/tmpxb9gvfr3", "png", "Figure", -1, -1, 0, 0)
+GH_P = 1000/((s+10)*(s^2+2*s+10));
+figure()
+rlocus(GH_P)
+figure()
+GH_PI = (1000*(s+20))/(s*(s+10)*(s^2+2*s+10));
+rlocus(GH_PI)
+_make_figures("/tmp/tmpv1jw1zf0", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Nov 18 03:11:09 2020 UTC <herzs@ip-10-1-3-132>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_8");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% loading data...
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6; % time (s)
+Vs_load = data_load(:,3); % voltages (V)
+V0_load = Vs_load(1); % initial voltage (V)
+startIndex_load = find(Vs_load>V0_load,1,'first'); % finding index where votlage step occurs
+tstart_load = time_load(startIndex_load); % time where voltage step occurs
+Vin_load = Vs_load(startIndex_load); % magnitude of input voltage after step (V)
+omega_load = data_load(:,4); % angular speed (rad/s)
+omega0_load = mean(omega_load(1:20)); % initial angular speed (rad/s)
+omegass_load = mean(omega_load(end-20:end)); % steady state angular speed after voltage step (rad/s)
+omega_trimmed = omega_load(startIndex_load:end); % trimmed angular speeds to only include after the voltage step
+time_trimmed = time_load(startIndex_load:end)-tstart_load; % trimmed time to only include after the voltage step
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load; 
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load; 
+a = 1/tau_load;
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0_load);
+% plotting model against experimental data...
+s = tf('s');
+P = A/(s+a) % first order piece of third order system
+[ysim_load1,tsim_load1]=step(P,time_trimmed);
+ymodel_load1 = ((Vin_load-V0_load)*ysim_load1)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim_load1,ymodel_load1)
+title('Comparison of Plant Model to Experimental Data for the Mass-Spring System')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+legend('Experimental Data','First Order Plant','location','southeast')
+hold off;
+_make_figures("/tmp/tmpjxy2py1v", "png", "Figure", -1, -1, 0, 0)
+% finding open loop settling time...
+[ysim,tsim] = step(P,5);
+yss = ysim(end);
+ts_open = tsim(find((((yss-ysim)/yss)*100)<=0.02,1,'first')); 
+% defining desired eigenvalue...
+zetad = 0.5;
+ts_closed = ts_open/2;
+wnd = 4/(ts_closed*zetad);
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j;
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j;
+% calculating zero angle through angle deficiency...
+ang_p1 = atan2d(wnd*sqrt(1-zetad^2),-zetad*wnd); % angle from pole at origin to target eigenvalue
+ang_p2 = atan2d(wnd*sqrt(1-zetad^2),-zetad*wnd+a); % angle from pole at a to target eigenvalue
+ang_z = -180+ang_p1+ang_p2; % angle from zeroto target eigenvalue
+d = (wnd*sqrt(1-zetad^2))/(tand(ang_z));
+z = zetad*wnd + d % zero
+% determining gains...
+GH = ((s+z)/s)*P
+mag_GH_at_sd = abs((66.64*sd1+1608)/(sd1^2+5.952*sd1));
+K = 1/(mag_GH_at_sd)
+Ksum = 1
+Kp = K/Ksum
+Ki = Kp*z
+_make_figures("/tmp/tmpbxpeua6c", "png", "Figure", -1, -1, 0, 0)
+% plotting root locus...
+figure()
+hold on;
+rlocus(GH)
+plot(real(sd1),imag(sd1),'r.','MarkerSize',15)
+plot(real(sd2),imag(sd2),'r.','MarkerSize',15)
+hold off;
+_make_figures("/tmp/tmpe6qwhwfj", "png", "Figure", -1, -1, 0, 0)
+% plotting model to actual step response...
+validdata = load('ControllerValidation.txt');
+time_valid = validdata(:,1)*1E-6;
+desiredSpeed = validdata(:,2);
+actualSpeed = validdata(:,3);
+motorCount = validdata(:,4);
+inputVoltage = validdata(:,5);
+desiredSpeed0 = desiredSpeed(1);
+startIndex = find(desiredSpeed>desiredSpeed0,1,'first');
+startTime = time_valid(startIndex);
+timetrimmed = time_valid(startIndex:end)-startTime;
+desiredSpeedss = desiredSpeed(startIndex);
+stepMag = desiredSpeedss - desiredSpeed0;
+GCL = (K*GH)/(1+K*GH)
+[y1,t1] = step(GCL,timetrimmed(end));
+ymodel1 = (stepMag*y1)+desiredSpeed0;
+figure()
+plot(timetrimmed,actualSpeed(startIndex:end))
+hold on;
+plot(t1,ymodel1)
+xlabel('Time(s)')
+ylabel('Angular Velocity (rad/s)')
+title('PI Angular Velocity Controller Validation')
+legend('Experimental Data','Model','location','southeast')
+_make_figures("/tmp/tmp5llq3zff", "png", "Figure", -1, -1, 0, 0)
+frequency = [0.5,1,5,10,15,25,30,40,50]*2*pi;
+MR_dB = [-0.845,-1.80,-13.52,-16.38,-17.02,-19.05,-19.05,-19.05,-20.5];
+figure()
+subplot(2,1,1);
+semilogx(frequency,MR_dB,'-o')
+xlabel('Frequency [rad/s]')
+ylabel('Magnitude [dB]')
+title('Bode Magnitude Plot')
+xlim([0.1 1000])
+ylim([-27 2])
+grid on
+hold on
+bode(GCL)
+_make_figures("/tmp/tmpm2ecycxv", "png", "Figure", -1, -1, 0, 0)
+data = load('digitalcontrol_verification4.txt');
+time = data(:,1)*1E-6;
+desiredSpeed = data(:,2);
+actualSpeed = data(:,3);
+motorCount = data(:,4);
+inputVoltage = data(:,5);
+desiredSpeed0 = desiredSpeed(1);
+startIndex = find(desiredSpeed>desiredSpeed0,1,'first');
+startTime = time(startIndex);
+timetrimmed = time(startIndex:end)-startTime;
+desiredSpeedss = desiredSpeed(startIndex);
+stepMag = desiredSpeedss - desiredSpeed0;
+[y2,t2] = step(GCL,timetrimmed(end));
+ymodel2 = (stepMag*y2)+desiredSpeed0;
+figure()
+plot(timetrimmed,actualSpeed(startIndex:end))
+hold on;
+plot(t2,ymodel2)
+xlabel('Time(s)')
+ylabel('Angular Velocity (rad/s)')
+title('PI Angular Velocity Controller Validation')
+legend('Experimental Data','Model','location','southeast')
+_make_figures("/tmp/tmpf8uysq48", "png", "Figure", -1, -1, 0, 0)
+data_unstable = load('digitalcontrol_delay55.txt');
+time_unstable = data_unstable(:,1)*1E-6;
+desiredSpeed_unstable = data_unstable(:,2);
+motorSpeed_unstable = data_unstable(:,3);
+motorCount_unstable = data_unstable(:,4);
+inputVoltage_unstable = data_unstable(:,5);
+desiredSpeed0_unstable = desiredSpeed_unstable(1);
+startIndex_unstable = find(desiredSpeed_unstable>desiredSpeed0_unstable,1,'first');
+startTime_unstable = time_unstable(startIndex_unstable);
+timetrimmed_unstable = time_unstable(startIndex_unstable:end)-startTime_unstable;
+figure()
+plot(timetrimmed_unstable,motorSpeed_unstable(startIndex_unstable:end))
+xlabel('Time (s)')
+ylabel('Motor Angular Speed (rad/s)')
+title('Motor Angular Speed Step Response with Addition of 55 ms Time Delay')
+_make_figures("/tmp/tmpuq_jemzh", "png", "Figure", -1, -1, 0, 0)
+% time delay of 1 ms...
+data_delay1 = load('digitalcontrol_delay1.txt');
+time_delay1 = data_delay1(:,1)*1E-6;
+desiredSpeed_delay1 = data_delay1(:,2);
+motorSpeed_delay1 = data_delay1(:,3);
+motorCount_delay1 = data_delay1(:,4);
+inputVoltage_delay1 = data_delay1(:,5);
+desiredSpeed0_delay1 = desiredSpeed_delay1(1);
+startIndex_delay1 = find(desiredSpeed_delay1>desiredSpeed0_delay1,1,'first');
+startTime_delay1 = time_delay1(startIndex_delay1);
+timetrimmed_delay1 = time_delay1(startIndex_delay1:end)-startTime_delay1;
+% time delay of 10 ms...
+data_delay10 = load('digitalcontrol_delay10.txt');
+time_delay10 = data_delay10(:,1)*1E-6;
+desiredSpeed_delay10 = data_delay10(:,2);
+motorSpeed_delay10 = data_delay10(:,3);
+motorCount_delay10 = data_delay10(:,4);
+inputVoltage_delay10 = data_delay10(:,5);
+desiredSpeed0_delay10 = desiredSpeed_delay10(1);
+startIndex_delay10 = find(desiredSpeed_delay10>desiredSpeed0_delay10,1,'first');
+startTime_delay10 = time_delay10(startIndex_delay10);
+timetrimmed_delay10 = time_delay10(startIndex_delay10:end)-startTime_delay10;
+% time delay of 20 ms...
+data_delay20 = load('digitalcontrol_delay20.txt');
+time_delay20 = data_delay20(:,1)*1E-6;
+desiredSpeed_delay20 = data_delay20(:,2);
+motorSpeed_delay20 = data_delay20(:,3);
+motorCount_delay20 = data_delay20(:,4);
+inputVoltage_delay20 = data_delay20(:,5);
+desiredSpeed0_delay20 = desiredSpeed_delay20(1);
+startIndex_delay20 = find(desiredSpeed_delay20>desiredSpeed0_delay20,1,'first');
+startTime_delay20 = time_delay20(startIndex_delay20);
+timetrimmed_delay20 = time_delay20(startIndex_delay20:end)-startTime_delay20;
+% time delay of 30 ms...
+data_delay30 = load('digitalcontrol_delay30.txt');
+time_delay30 = data_delay30(:,1)*1E-6;
+desiredSpeed_delay30 = data_delay30(:,2);
+motorSpeed_delay30 = data_delay30(:,3);
+motorCount_delay30 = data_delay30(:,4);
+inputVoltage_delay30 = data_delay30(:,5);
+desiredSpeed0_delay30 = desiredSpeed_delay30(1);
+startIndex_delay30 = find(desiredSpeed_delay30>desiredSpeed0_delay30,1,'first');
+startTime_delay30 = time_delay30(startIndex_delay30);
+timetrimmed_delay30 = time_delay30(startIndex_delay30:end)-startTime_delay30;
+% time delay of 40 ms...
+data_delay40 = load('digitalcontrol_delay40.txt');
+time_delay40 = data_delay40(:,1)*1E-6;
+desiredSpeed_delay40 = data_delay40(:,2);
+motorSpeed_delay40 = data_delay40(:,3);
+motorCount_delay40 = data_delay40(:,4);
+inputVoltage_delay40 = data_delay40(:,5);
+desiredSpeed0_delay40 = desiredSpeed_delay40(1);
+startIndex_delay40 = find(desiredSpeed_delay40>desiredSpeed0_delay40,1,'first');
+startTime_delay40 = time_delay40(startIndex_delay40);
+timetrimmed_delay40 = time_delay40(startIndex_delay40:end)-startTime_delay40;
+% time delay of 50 ms...
+data_delay50 = load('digitalcontrol_delay50.txt');
+time_delay50 = data_delay50(:,1)*1E-6;
+desiredSpeed_delay50 = data_delay50(:,2);
+motorSpeed_delay50 = data_delay50(:,3);
+motorCount_delay50 = data_delay50(:,4);
+inputVoltage_delay50 = data_delay50(:,5);
+desiredSpeed0_delay50 = desiredSpeed_delay50(1);
+startIndex_delay50 = find(desiredSpeed_delay50>desiredSpeed0_delay50,1,'first');
+startTime_delay50 = time_delay50(startIndex_delay50);
+timetrimmed_delay50 = time_delay50(startIndex_delay50:end)-startTime_delay50;
+figure()
+plot(timetrimmed_delay1,motorSpeed_delay1(startIndex_delay1:end))
+hold on;
+plot(timetrimmed_delay10,motorSpeed_delay10(startIndex_delay10:end))
+plot(timetrimmed_delay20,motorSpeed_delay20(startIndex_delay20:end))
+plot(timetrimmed_delay30,motorSpeed_delay30(startIndex_delay30:end))
+plot(timetrimmed_delay40,motorSpeed_delay40(startIndex_delay40:end))
+plot(timetrimmed_delay50,motorSpeed_delay50(startIndex_delay50:end))
+xlabel('Time (s)')
+ylabel('Motor Angular Speed (rad/s)')
+title('Motor Angular Speed Step Response with Addition of Various Time Delays Below 0.03 s')
+legend('1 ms','10 ms','20 ms','30 ms','40 ms','50 ms','location','southeast')
+xlim([0 2]);
+hold off;
+_make_figures("/tmp/tmpuht7p5oz", "png", "Figure", -1, -1, 0, 0)
+% delay of 55 ms w/ Ksum = 0.25
+data_delay55 = load('digitalcontrol_delay55Ksum0.25.txt');
+time_delay55 = data_delay55(:,1)*1E-6;
+desiredSpeed_delay55 = data_delay55(:,2);
+motorSpeed_delay55 = data_delay55(:,3);
+motorCount_delay55 = data_delay55(:,4);
+inputVoltage_delay55 = data_delay55(:,5);
+desiredSpeed0_delay55 = desiredSpeed_delay55(1);
+startIndex_delay55 = find(desiredSpeed_delay55>desiredSpeed0_delay55,1,'first');
+startTime_delay55 = time_delay55(startIndex_delay55);
+timetrimmed_delay55 = time_delay55(startIndex_delay55:end)-startTime_delay55;
+% no time delay w/ Ksum = 1...
+data_nodelay = load('digitalcontrol_delay0Ksum1.txt');
+time_nodelay = data_nodelay(:,1)*1E-6;
+desiredSpeed_nodelay = data_nodelay(:,2);
+motorSpeed_nodelay = data_nodelay(:,3);
+motorCount_nodelay = data_nodelay(:,4);
+inputVoltage_nodelay = data_nodelay(:,5);
+desiredSpeed0_nodelay = desiredSpeed_nodelay(1);
+startIndex_nodelay = find(desiredSpeed_nodelay>desiredSpeed0_nodelay,1,'first');
+startTime_nodelay = time_nodelay(startIndex_nodelay);
+timetrimmed_nodelay = time_nodelay(startIndex_nodelay:end)-startTime_nodelay;
+figure()
+plot(timetrimmed_delay55,motorSpeed_delay55(startIndex_delay55:end))
+hold on;
+plot(timetrimmed_nodelay,motorSpeed_nodelay(startIndex_nodelay:end))
+ylabel('Motor Angular Speed (rad/s)')
+title('Motor Angular Speed Step Response with Varying Ksum and Time Delay Values')
+legend('55 ms delay, Ksum = 0.25','0 ms delay, Ksum = 1','location','southeast')
+xlim([0 2]);
+hold off;
+_make_figures("/tmp/tmptrpg7qw9", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Nov 18 23:13:35 2020 UTC <herzs@ip-10-1-3-69>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_8");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% loading data...
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6; % time (s)
+Vs_load = data_load(:,3); % voltages (V)
+V0_load = Vs_load(1); % initial voltage (V)
+startIndex_load = find(Vs_load>V0_load,1,'first'); % finding index where votlage step occurs
+tstart_load = time_load(startIndex_load); % time where voltage step occurs
+Vin_load = Vs_load(startIndex_load); % magnitude of input voltage after step (V)
+omega_load = data_load(:,4); % angular speed (rad/s)
+omega0_load = mean(omega_load(1:20)); % initial angular speed (rad/s)
+omegass_load = mean(omega_load(end-20:end)); % steady state angular speed after voltage step (rad/s)
+omega_trimmed = omega_load(startIndex_load:end); % trimmed angular speeds to only include after the voltage step
+time_trimmed = time_load(startIndex_load:end)-tstart_load; % trimmed time to only include after the voltage step
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load; 
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load; 
+a = 1/tau_load;
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0_load);
+% plotting model against experimental data...
+s = tf('s');
+P = A/(s+a) % first order piece of third order system
+[ysim_load1,tsim_load1]=step(P,time_trimmed);
+ymodel_load1 = ((Vin_load-V0_load)*ysim_load1)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim_load1,ymodel_load1)
+title('Comparison of Plant Model to Experimental Data for the Mass-Spring System')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+legend('Experimental Data','First Order Plant','location','southeast')
+hold off;
+_make_figures("/tmp/tmp5cjyc3q3", "png", "Figure", -1, -1, 0, 0)
+% finding open loop settling time...
+[ysim,tsim] = step(P,5);
+yss = ysim(end);
+ts_open = tsim(find((((yss-ysim)/yss)*100)<=0.02,1,'first')); 
+% defining desired eigenvalue...
+zetad = 0.5;
+ts_closed = ts_open/2;
+wnd = 4/(ts_closed*zetad);
+sd1 = -(zetad*wnd) + wnd*sqrt(1-zetad^2)*1j;
+sd2 = -(zetad*wnd) - wnd*sqrt(1-zetad^2)*1j;
+% calculating zero angle through angle deficiency...
+ang_p1 = atan2d(wnd*sqrt(1-zetad^2),-zetad*wnd); % angle from pole at origin to target eigenvalue
+ang_p2 = atan2d(wnd*sqrt(1-zetad^2),-zetad*wnd+a); % angle from pole at a to target eigenvalue
+ang_z = -180+ang_p1+ang_p2; % angle from zeroto target eigenvalue
+d = (wnd*sqrt(1-zetad^2))/(tand(ang_z));
+z = zetad*wnd + d % zero
+% determining gains...
+GH = ((s+z)/s)*P
+mag_GH_at_sd = abs((66.64*sd1+1608)/(sd1^2+5.952*sd1));
+K = 1/(mag_GH_at_sd)
+Ksum = 1
+Kp = K/Ksum
+Ki = Kp*z
+_make_figures("/tmp/tmprjyr_gc1", "png", "Figure", -1, -1, 0, 0)
+% plotting root locus...
+figure()
+hold on;
+rlocus(GH)
+plot(real(sd1),imag(sd1),'r.','MarkerSize',15)
+plot(real(sd2),imag(sd2),'r.','MarkerSize',15)
+hold off;
+_make_figures("/tmp/tmpyjimwxp0", "png", "Figure", -1, -1, 0, 0)
+% plotting model to actual step response...
+validdata = load('ControllerValidation2.txt');
+time_valid = validdata(:,1)*1E-6;
+desiredSpeed = validdata(:,2);
+actualSpeed = validdata(:,3);
+motorCount = validdata(:,4);
+inputVoltage = validdata(:,5);
+desiredSpeed0 = desiredSpeed(1);
+startIndex = find(desiredSpeed>desiredSpeed0,1,'first');
+startTime = time_valid(startIndex);
+timetrimmed = time_valid(startIndex:end)-startTime;
+desiredSpeedss = desiredSpeed(startIndex);
+stepMag = desiredSpeedss - desiredSpeed0;
+GCL = (K*GH)/(1+K*GH)
+[y1,t1] = step(GCL,timetrimmed(end));
+ymodel1 = (stepMag*y1)+desiredSpeed0;
+figure()
+plot(timetrimmed,actualSpeed(startIndex:end))
+hold on;
+plot(t1,ymodel1)
+xlabel('Time(s)')
+ylabel('Angular Velocity (rad/s)')
+title('PI Angular Velocity Controller Validation')
+legend('Experimental Data','Model','location','southeast')
+_make_figures("/tmp/tmprhzzl9l0", "png", "Figure", -1, -1, 0, 0)
+frequency = [0.5,1,5,10,15,25,30,40,50]*2*pi;
+MR_dB = [-0.845,-1.80,-13.52,-16.38,-17.02,-19.05,-19.05,-19.05,-20.5];
+figure()
+subplot(2,1,1);
+semilogx(frequency,MR_dB,'-o')
+xlabel('Frequency [rad/s]')
+ylabel('Magnitude [dB]')
+title('Bode Magnitude Plot')
+xlim([0.1 1000])
+ylim([-27 2])
+grid on
+hold on
+bode(GCL)
+_make_figures("/tmp/tmpbcc_z1_z", "png", "Figure", -1, -1, 0, 0)
+data = load('digitalcontrol_verification4.txt');
+time = data(:,1)*1E-6;
+desiredSpeed = data(:,2);
+actualSpeed = data(:,3);
+motorCount = data(:,4);
+inputVoltage = data(:,5);
+desiredSpeed0 = desiredSpeed(1);
+startIndex = find(desiredSpeed>desiredSpeed0,1,'first');
+startTime = time(startIndex);
+timetrimmed = time(startIndex:end)-startTime;
+desiredSpeedss = desiredSpeed(startIndex);
+stepMag = desiredSpeedss - desiredSpeed0;
+[y2,t2] = step(GCL,timetrimmed(end));
+ymodel2 = (stepMag*y2)+desiredSpeed0;
+figure()
+plot(timetrimmed,actualSpeed(startIndex:end))
+hold on;
+plot(t2,ymodel2)
+xlabel('Time(s)')
+ylabel('Angular Velocity (rad/s)')
+title('PI Angular Velocity Controller Validation')
+legend('Experimental Data','Model','location','southeast')
+_make_figures("/tmp/tmp4xri2l2g", "png", "Figure", -1, -1, 0, 0)
+data_unstable = load('digitalcontrol_delay55.txt');
+time_unstable = data_unstable(:,1)*1E-6;
+desiredSpeed_unstable = data_unstable(:,2);
+motorSpeed_unstable = data_unstable(:,3);
+motorCount_unstable = data_unstable(:,4);
+inputVoltage_unstable = data_unstable(:,5);
+desiredSpeed0_unstable = desiredSpeed_unstable(1);
+startIndex_unstable = find(desiredSpeed_unstable>desiredSpeed0_unstable,1,'first');
+startTime_unstable = time_unstable(startIndex_unstable);
+timetrimmed_unstable = time_unstable(startIndex_unstable:end)-startTime_unstable;
+figure()
+plot(timetrimmed_unstable,motorSpeed_unstable(startIndex_unstable:end))
+xlabel('Time (s)')
+ylabel('Motor Angular Speed (rad/s)')
+title('Motor Angular Speed Step Response with Addition of 55 ms Time Delay')
+_make_figures("/tmp/tmpae1f0zv7", "png", "Figure", -1, -1, 0, 0)
+% time delay of 1 ms...
+data_delay1 = load('digitalcontrol_delay1.txt');
+time_delay1 = data_delay1(:,1)*1E-6;
+desiredSpeed_delay1 = data_delay1(:,2);
+motorSpeed_delay1 = data_delay1(:,3);
+motorCount_delay1 = data_delay1(:,4);
+inputVoltage_delay1 = data_delay1(:,5);
+desiredSpeed0_delay1 = desiredSpeed_delay1(1);
+startIndex_delay1 = find(desiredSpeed_delay1>desiredSpeed0_delay1,1,'first');
+startTime_delay1 = time_delay1(startIndex_delay1);
+timetrimmed_delay1 = time_delay1(startIndex_delay1:end)-startTime_delay1;
+% time delay of 10 ms...
+data_delay10 = load('digitalcontrol_delay10.txt');
+time_delay10 = data_delay10(:,1)*1E-6;
+desiredSpeed_delay10 = data_delay10(:,2);
+motorSpeed_delay10 = data_delay10(:,3);
+motorCount_delay10 = data_delay10(:,4);
+inputVoltage_delay10 = data_delay10(:,5);
+desiredSpeed0_delay10 = desiredSpeed_delay10(1);
+startIndex_delay10 = find(desiredSpeed_delay10>desiredSpeed0_delay10,1,'first');
+startTime_delay10 = time_delay10(startIndex_delay10);
+timetrimmed_delay10 = time_delay10(startIndex_delay10:end)-startTime_delay10;
+% time delay of 20 ms...
+data_delay20 = load('digitalcontrol_delay20.txt');
+time_delay20 = data_delay20(:,1)*1E-6;
+desiredSpeed_delay20 = data_delay20(:,2);
+motorSpeed_delay20 = data_delay20(:,3);
+motorCount_delay20 = data_delay20(:,4);
+inputVoltage_delay20 = data_delay20(:,5);
+desiredSpeed0_delay20 = desiredSpeed_delay20(1);
+startIndex_delay20 = find(desiredSpeed_delay20>desiredSpeed0_delay20,1,'first');
+startTime_delay20 = time_delay20(startIndex_delay20);
+timetrimmed_delay20 = time_delay20(startIndex_delay20:end)-startTime_delay20;
+% time delay of 30 ms...
+data_delay30 = load('digitalcontrol_delay30.txt');
+time_delay30 = data_delay30(:,1)*1E-6;
+desiredSpeed_delay30 = data_delay30(:,2);
+motorSpeed_delay30 = data_delay30(:,3);
+motorCount_delay30 = data_delay30(:,4);
+inputVoltage_delay30 = data_delay30(:,5);
+desiredSpeed0_delay30 = desiredSpeed_delay30(1);
+startIndex_delay30 = find(desiredSpeed_delay30>desiredSpeed0_delay30,1,'first');
+startTime_delay30 = time_delay30(startIndex_delay30);
+timetrimmed_delay30 = time_delay30(startIndex_delay30:end)-startTime_delay30;
+% time delay of 40 ms...
+data_delay40 = load('digitalcontrol_delay40.txt');
+time_delay40 = data_delay40(:,1)*1E-6;
+desiredSpeed_delay40 = data_delay40(:,2);
+motorSpeed_delay40 = data_delay40(:,3);
+motorCount_delay40 = data_delay40(:,4);
+inputVoltage_delay40 = data_delay40(:,5);
+desiredSpeed0_delay40 = desiredSpeed_delay40(1);
+startIndex_delay40 = find(desiredSpeed_delay40>desiredSpeed0_delay40,1,'first');
+startTime_delay40 = time_delay40(startIndex_delay40);
+timetrimmed_delay40 = time_delay40(startIndex_delay40:end)-startTime_delay40;
+% time delay of 50 ms...
+data_delay50 = load('digitalcontrol_delay50.txt');
+time_delay50 = data_delay50(:,1)*1E-6;
+desiredSpeed_delay50 = data_delay50(:,2);
+motorSpeed_delay50 = data_delay50(:,3);
+motorCount_delay50 = data_delay50(:,4);
+inputVoltage_delay50 = data_delay50(:,5);
+desiredSpeed0_delay50 = desiredSpeed_delay50(1);
+startIndex_delay50 = find(desiredSpeed_delay50>desiredSpeed0_delay50,1,'first');
+startTime_delay50 = time_delay50(startIndex_delay50);
+timetrimmed_delay50 = time_delay50(startIndex_delay50:end)-startTime_delay50;
+figure()
+plot(timetrimmed_delay1,motorSpeed_delay1(startIndex_delay1:end))
+hold on;
+plot(timetrimmed_delay10,motorSpeed_delay10(startIndex_delay10:end))
+plot(timetrimmed_delay20,motorSpeed_delay20(startIndex_delay20:end))
+plot(timetrimmed_delay30,motorSpeed_delay30(startIndex_delay30:end))
+plot(timetrimmed_delay40,motorSpeed_delay40(startIndex_delay40:end))
+plot(timetrimmed_delay50,motorSpeed_delay50(startIndex_delay50:end))
+xlabel('Time (s)')
+ylabel('Motor Angular Speed (rad/s)')
+title('Motor Angular Speed Step Response with Addition of Various Time Delays Below 0.03 s')
+legend('1 ms','10 ms','20 ms','30 ms','40 ms','50 ms','location','southeast')
+xlim([0 2]);
+hold off;
+_make_figures("/tmp/tmpeoypewma", "png", "Figure", -1, -1, 0, 0)
+% delay of 55 ms w/ Ksum = 0.25
+data_delay55 = load('digitalcontrol_delay55Ksum0.25.txt');
+time_delay55 = data_delay55(:,1)*1E-6;
+desiredSpeed_delay55 = data_delay55(:,2);
+motorSpeed_delay55 = data_delay55(:,3);
+motorCount_delay55 = data_delay55(:,4);
+inputVoltage_delay55 = data_delay55(:,5);
+desiredSpeed0_delay55 = desiredSpeed_delay55(1);
+startIndex_delay55 = find(desiredSpeed_delay55>desiredSpeed0_delay55,1,'first');
+startTime_delay55 = time_delay55(startIndex_delay55);
+timetrimmed_delay55 = time_delay55(startIndex_delay55:end)-startTime_delay55;
+% no time delay w/ Ksum = 1...
+data_nodelay = load('digitalcontrol_delay0Ksum1.txt');
+time_nodelay = data_nodelay(:,1)*1E-6;
+desiredSpeed_nodelay = data_nodelay(:,2);
+motorSpeed_nodelay = data_nodelay(:,3);
+motorCount_nodelay = data_nodelay(:,4);
+inputVoltage_nodelay = data_nodelay(:,5);
+desiredSpeed0_nodelay = desiredSpeed_nodelay(1);
+startIndex_nodelay = find(desiredSpeed_nodelay>desiredSpeed0_nodelay,1,'first');
+startTime_nodelay = time_nodelay(startIndex_nodelay);
+timetrimmed_nodelay = time_nodelay(startIndex_nodelay:end)-startTime_nodelay;
+figure()
+plot(timetrimmed_delay55,motorSpeed_delay55(startIndex_delay55:end))
+hold on;
+plot(timetrimmed_nodelay,motorSpeed_nodelay(startIndex_nodelay:end))
+ylabel('Motor Angular Speed (rad/s)')
+title('Motor Angular Speed Step Response with Varying Ksum and Time Delay Values')
+legend('55 ms delay, Ksum = 0.25','0 ms delay, Ksum = 1','location','southeast')
+xlim([0 2]);
+hold off;
+_make_figures("/tmp/tmp5u0sjjl2", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Nov 18 23:19:22 2020 UTC <herzs@ip-10-1-3-69>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_3");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Fri Nov 20 03:19:42 2020 UTC <herzs@ip-10-1-3-69>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_3");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Thu Nov 26 04:35:08 2020 UTC <herzs@ip-10-1-3-30>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_3");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Mon Nov 30 22:49:40 2020 UTC <herzs@ip-10-1-3-138>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week13_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Wed Dec 02 00:35:06 2020 UTC <herzs@ip-10-1-3-122>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Exam_3");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+s = tf('s');
+P = 0.25/(s^2+2*s); % plant transfer function for ang. position
+H = 10/(s+10);
+GH = P*H
+zeta = 0.5;
+wn = 3;
+% desired eigenvalues...
+sd1 = -zeta*wn + wn*sqrt(1-zeta^2)*j 
+sd2 = -zeta*wn - wn*sqrt(1-zeta^2)*j;
+% finding zero added from PD control using angle deficiency...
+angle_p1 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn); % angle from pole at origin to target eigenvalue
+angle_p2 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+2); % angle from pole at -4 to target eigenvalue
+angle_p3 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+10); % angle from pole at -10 to target eigenvalue
+angle_z = -180+angle_p1+angle_p2+angle_p3 % angle from zero to target eigenvalue
+d = (wn*sqrt(1-zeta^2))/(tand(angle_z));
+z = zeta*wn + d % zero
+P_PD = GH*(s+z) % transfer function under PD control
+% finding the gain (K) using magnitude criterion...
+sd = -sd2;
+Pmag_sd = abs((2.5*sd2+12.66)/(sd^3+12*sd^2+20*sd));
+K = 1/Pmag_sd;
+Ksum = 1.0;
+Kd = K/Ksum
+Kp = Kd*z
+_make_figures("/tmp/tmpionryl4t", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = 0.25/(s^2+2*s); % plant transfer function for ang. position
+H = 10/(s+10);
+GH = P*H
+zeta = 0.5;
+wn = 3;
+% desired eigenvalues...
+sd1 = -zeta*wn + wn*sqrt(1-zeta^2)*j 
+sd2 = -zeta*wn - wn*sqrt(1-zeta^2)*j;
+% finding zero added from PD control using angle deficiency...
+angle_p1 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn); % angle from pole at origin to target eigenvalue
+angle_p2 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+2); % angle from pole at -4 to target eigenvalue
+angle_p3 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+10); % angle from pole at -10 to target eigenvalue
+angle_z = -180+angle_p1+angle_p2+angle_p3; % angle from zero to target eigenvalue
+d = (wn*sqrt(1-zeta^2))/(tand(angle_z));
+z = zeta*wn + d % zero
+P_PD = GH*(s+z) % transfer function under PD control
+% finding the gain (K) using magnitude criterion...
+sd = -sd2;
+Pmag_sd = abs((2.5*sd2+12.66)/(sd^3+12*sd^2+20*sd));
+K = 1/Pmag_sd;
+Ksum = 1.0;
+Kd = K/Ksum
+Kp = Kd*z
+_make_figures("/tmp/tmps64f4c0q", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = 0.25/(s^2+2*s); % plant transfer function for ang. position
+H = 10/(s+10);
+GH = P*H
+zeta = 0.5;
+wn = 3;
+% desired eigenvalues...
+sd1 = -zeta*wn + wn*sqrt(1-zeta^2)*j; 
+sd2 = -zeta*wn - wn*sqrt(1-zeta^2)*j;
+% finding zero added from PD control using angle deficiency...
+angle_p1 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn); % angle from pole at origin to target eigenvalue
+angle_p2 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+2); % angle from pole at -4 to target eigenvalue
+angle_p3 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+10); % angle from pole at -10 to target eigenvalue
+angle_z = -180+angle_p1+angle_p2+angle_p3; % angle from zero to target eigenvalue
+d = (wn*sqrt(1-zeta^2))/(tand(angle_z));
+z = zeta*wn + d % zero
+P_PD = GH*(s+z) % transfer function under PD control
+% finding the gain (K) using magnitude criterion...
+sd = -sd2;
+Pmag_sd = abs((2.5*sd2+12.66)/(sd^3+12*sd^2+20*sd));
+K = 1/Pmag_sd;
+Ksum = 1.0;
+Kd = K/Ksum
+Kp = Kd*z
+_make_figures("/tmp/tmpn4dhu10n", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = 0.25/(s^2+2*s); % plant transfer function for ang. position
+H = 10/(s+10);
+GH = P*H
+zeta = 0.5;
+wn = 3;
+% desired eigenvalues...
+sd1 = -zeta*wn + wn*sqrt(1-zeta^2)*j; 
+sd2 = -zeta*wn - wn*sqrt(1-zeta^2)*j;
+% finding zero added from PD control using angle deficiency...
+angle_p1 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn); % angle from pole at origin to target eigenvalue
+angle_p2 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+2); % angle from pole at -4 to target eigenvalue
+angle_p3 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+10); % angle from pole at -10 to target eigenvalue
+angle_z = -180+angle_p1+angle_p2+angle_p3; % angle from zero to target eigenvalue
+d = (wn*sqrt(1-zeta^2))/(tand(angle_z));
+z = zeta*wn + d % zero
+P_PD = GH*(s+z) % transfer function under PD control
+% finding the gain (K) using magnitude criterion...
+sd = -sd2;
+Pmag_sd = abs((2.5*sd+12.66)/(sd^3+12*sd^2+20*sd));
+K = 1/Pmag_sd;
+Ksum = 1.0;
+Kd = K/Ksum
+Kp = Kd*z
+_make_figures("/tmp/tmpu4twfkda", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = 0.25/(s^2+2*s); % plant transfer function for ang. position
+H = 10/(s+10);
+GH = P*H
+zeta = 0.5;
+wn = 3;
+% desired eigenvalues...
+sd1 = -zeta*wn + wn*sqrt(1-zeta^2)*j; 
+sd2 = -zeta*wn - wn*sqrt(1-zeta^2)*j;
+% finding zero added from PD control using angle deficiency...
+angle_p1 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn); % angle from pole at origin to target eigenvalue
+angle_p2 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+2); % angle from pole at -4 to target eigenvalue
+angle_p3 = atan2d(wn*sqrt(1-zeta^2),-zeta*wn+10); % angle from pole at -10 to target eigenvalue
+angle_z = -180+angle_p1+angle_p2+angle_p3; % angle from zero to target eigenvalue
+d = (wn*sqrt(1-zeta^2))/(tand(angle_z));
+z = zeta*wn + d % zero
+P_PD = GH*(s+z) % transfer function under PD control
+% finding the gain (K) using magnitude criterion...
+Pmag_sd = abs((2.5*sd1+12.66)/(sd1^3+12*sd1^2+20*sd1));
+K = 1/Pmag_sd;
+Ksum = 1.0;
+Kd = K/Ksum
+Kp = Kd*z
+_make_figures("/tmp/tmpq2mp9zvj", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Dec 03 02:47:07 2020 UTC <herzs@ip-10-1-3-251>

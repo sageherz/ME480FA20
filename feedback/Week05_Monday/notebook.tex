@@ -1,0 +1,622 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{Week5\_Monday}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \section{Table of Contents}\label{table-of-contents}
+
+{1~~}Anatomy of the closed-loop control system
+
+{2~~}Proportional (P) Control
+
+{3~~}Example
+
+{4~~}Exercise
+
+    \section{Anatomy of the closed-loop control
+system}\label{anatomy-of-the-closed-loop-control-system}
+
+Last week, you were introduced to the "canonical" form of a system under
+feedback control, which is shown in the diagram below:
+
+    
+
+    In the diagram above, as labeled, the system has the following key
+pieces:
+
+\begin{itemize}
+\tightlist
+\item
+  The \textbf{plant} (labeled G(s) above) is the system, subsystem, or
+  process that is controlled by our feedback controller
+\item
+  The \textbf{controlled output} (labeled y(s) above) is the output
+  variable of the \emph{plant} under control of the feedback controller
+\item
+  The \textbf{forward path} is the transmission path from the sum
+  junction all the way to the controlled output.
+\item
+  The \textbf{feedforward elements} are all control or compensation
+  elements in the forward path. In the example above, this is just C(s).
+\item
+  The ** control signal ** (labeled u(s) above) is the output signal of
+  the feedforward elements (C(s)) that is applied to the plant G(s).
+\item
+  The \textbf{feedback path} is the transmission path from the
+  controlled output back to the sum junction.
+\item
+  The \textbf{feedback elements} (labeled H(s)) relate the \emph{actual}
+  controlled output y(s) and the feedback signal read by the controller
+  at the sum junction. Most often, H(s) is a sensor that has some gain
+  and filtering characteristics that apply in the act of measuring the
+  system output.
+\item
+  The \textbf{reference input} (labeled r(s)) is an external signal
+  signal applied to the system. This is usually our "request" for the
+  system to do something.
+\item
+  The \textbf{primary feedback signal} (labeled y(s)H(s)) is a function
+  of the controlled output y(s), transformed by the feedback elements
+  H(s). This is the signal that is usually actually read by the
+  controller.
+\item
+  The \textbf{error signal} is the difference between the reference
+  input and the primary feedback signal.
+\item
+  \textbf{Negative feedback} implies that the sum junction
+  \emph{subtracts} r-yH. \textbf{Positive feedback} would imply that the
+  sum junction adds r+yH. Negative feedback is nearly always used in
+  feedback control.
+\end{itemize}
+
+We saw in the last reading that the canonical feedback control system
+has a closed-loop transfer function:
+
+\begin{equation}
+\frac{y(s)}{u(s)} = \frac{CG}{1+CGH}
+\end{equation}
+
+But what does this really mean? Fundamentally, it means that the
+addition of the controller and feedback to the plant \emph{changes the
+dynamics of the plant output}. This is precisely what we want, if our
+goal is to improve system performance. In simple terms, \(C(s)\) is a
+transfer function that "makes decisions" about how hard to "push" the
+plant based on the difference between where the system \emph{is} at any
+given instant (\(y(s)H(s)\)), and where the operator \emph{wants the
+system to be} (\(r(s)\)). In this course, we will focus on variants of
+the PID or "proportional-integral-derivative" controller, which has the
+following general transfer function:
+
+\begin{equation}
+C(s) = \frac{u(s)}{e(s)}= K_p + K_i\frac{1}{s} + K_ds
+\end{equation}
+
+The PID controller responds to the error proportionally (P-control),
+and/or the error's derivative proportionally (D-control), and/or the
+error's integral proportionally (I-control). PID control almost always
+includes a P-control element in the form of \(K_p\), but often, \(K_i\)
+and/or \(K_d\) can be set to zero depending on the needs of the engineer
+and/or the plant. This week, we will focus on how variants of this
+general design work \textbf{for simple first and second order systems}.
+We'll use simplified examples and the so-called "direct method" of
+determining closed-loop system performance (see chapters 3 and 4 of
+Schaum's) to build an understanding of how each type of controller works
+before diving into some more involved design tools that will allow us to
+apply these controllers effectively to more complex systems.
+
+When synthesizing P(I)(D) controllers (which are discussed in your
+Schaum's text in chapters 2 and 6, amongst others), we can have a number
+of different design goals. Some of these are listed below:
+
+\begin{itemize}
+\tightlist
+\item
+  Above all, we want to ensure system \emph{stability,} defined as the
+  closed loop system having eigenvalues with real parts strictly less
+  than 0. We also generally want to know \emph{how stable} a system is..
+  in other words, how close is it to being unstable?
+\item
+  If the system (or its dominant pole) is first order, we may want to
+  change its time constant.
+\item
+  If the system (or its dominant complex conjugate pole pair) is second
+  order, we may want to specify its natural frequency and/or damping
+  ratio.
+\item
+  If the system (or its dominant complex conjugate pole pair) is second
+  order, we may want to specify its
+  \href{http://faculty.mercer.edu/jenkins_he/documents/2ndorderresponseMSD.pdf}{rise
+  time, settling time, or percent overshoot}.
+\item
+  We may want the system to achieve a particular performance in tracking
+  a a step or ramp input to \(r(s)\).
+\item
+  We may want the system to achieve a particular performance in
+  rejecting an impulse or step \emph{disturbance input} (not shown
+  above, but disturbances are usually modeled as appearing as an input
+  to a sum junction in between \(C(s)\) and the plant \(G(s)\)).
+\item
+  We may want the system to achieve particular magnitude and/or phase
+  performance when tracking a sinusoidal input of a known frequency on
+  \(r(s)\).
+\end{itemize}
+
+Our general procedure for analyzing or designing a control system in
+this course will go something like this:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Determine the equations and/or system transfer function for each
+  component of the system (e.g. \(C(s)\),\(G(s)\),\(H(s)\), etc.)
+\item
+  Formulate a model of the total, controlled system by appropriately
+  connecting the system elements using a block diagram. The canonical
+  form above is usually, but not always, a good starting point.
+\item
+  Design our controller, and determine the system response
+  characteristics under the chosen control paradigm.
+\item
+  Validate our predictions using experimental data, if possible.
+\end{enumerate}
+
+Much of what we'll discuss roughly follows the material in Chapter 10 of
+your Schaum's text. We will deal with how to handle most of these design
+goals as needed, but it is helpful to know where we are going. To begin
+our journey, let's take a closer look at so-called "P-control," which is
+a special case of PID control with \(K_d\) and \(K_i\) set to 0.
+
+    \section{Proportional (P) Control}\label{proportional-p-control}
+
+Proportional control is the simplest form of the PID feedback control
+paradigm. This controller 'pushes' on the plant \emph{proportionally} to
+the error between the reference input and the plant output. As the
+system gets closer to the desired value of the output, the controller
+pushes less and less hard. Think of this controller like a "spring" that
+drives the plant to the desired output. For a proportional controller,
+the controller transfer function is a constant \(K_p\). Formally, we
+write:
+
+\begin{equation}
+\frac{u(s)}{e(s)}=C(s) = K_p
+\end{equation}
+
+Note that \(e(s)\) and \(u(s)\) will often have different units. This
+means that the value of \(K_p\) will assume the units needed to make a
+dimensional analysis work out. For example, if \(e(s)\) is a distance
+error measured in meters, and \(u(s)\) is a voltage input to a motor
+measured in Volts, then the controller's proportional constant \(k_p\)
+must have units of \(\frac{V}{m}\). Often, as we work through examples
+where we are working with "nameless, faceless transfer functions" for
+practice, which may not have units, you'll see that we drop units when
+discussing system output \(y\), error \(e\), or controller output \(u\).
+This doesn't mean that these units aren't important. It just means that
+we're omitting them to keep the discussion as general as possible.
+
+    \section{Example}\label{example}
+
+** Given **
+
+Consider a plant \(P(s) = \frac{1}{s+1}\). Design a proportional
+controller to make this system track a step input, and achieve
+steady-state in less than 1 second. The system uses a sensor that
+measures the plant's output \(y(s)\) perfectly with a gain of \(1\).
+After designing your controller, find the maximum controller output
+\(u(s)\) needed for a unit step input, and find the system's
+steady-state error between reference input and system output. \_\_\_
+
+\textbf{Solution}
+
+To decipher the design goal, recall that a first-order system reaches
+steady state in roughly 5 time constants. Therefore, we can say that
+we'd like our system to have a time constant of 0.2 seconds or less.
+Because the problem also states that the sensing in the system is
+'perfect,' we can say that \(H(s)=1\). Applying a proportional
+controller to this system and substituting into the closed loop transfer
+function \(\frac{y(s)}{r(s)}\) yields:
+
+\begin{equation}
+\frac{y(s)}{r(s)} = \frac{K_p\frac{1}{s+1}}{1+K_p\frac{1}{s+1}}
+\end{equation}
+
+Clearing the fractions in the numerator and denominator by multiplying
+the transfer function by \(\frac{s+1}{s+1}\) yields the final equation
+for the system's \emph{closed loop transfer function}:
+
+\begin{equation}
+G_{cl}(s) = \frac{y(s)}{r(s)} = \frac{K_p}{s+1+K_p}
+\end{equation}
+
+Now, we have to determine what value of \(K_p\) will allow us to reach
+our design goal of \(\tau<0.2s\). Because we know that
+\(\tau=-\frac{1}{a}\), where \(a\) is the system eigenvalue (the root of
+its characteristic equation), what we actually want is for a system with
+\(a=-5\). Solving the system's closed-loop characteristic equation means
+solving:
+
+\begin{equation}
+s+1+K_p=0
+\end{equation}
+
+This yields a system eigenvalue \(a=-1-K_p\), so for our example, we
+know that \(K_p=4\) will satisfy our design requirement. Let's simulate
+the closed-loop system's response to a step input on \(r(s)\).
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{s} \PY{p}{=} \PY{n}{tf}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{s\PYZsq{}}\PY{p}{)}\PY{p}{;}
+        \PY{n}{t} \PY{p}{=} \PY{l+m+mi}{0}\PY{p}{:}\PY{p}{.}\PY{l+m+mi}{001}\PY{p}{:}\PY{l+m+mf}{1.5}\PY{p}{;}\PY{c}{\PYZpc{}go a little past where we said the system should be at steady state}
+        \PY{n}{G1} \PY{p}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{p}{(}\PY{n}{s}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{Kp} \PY{p}{=} \PY{l+m+mi}{4}\PY{p}{;}
+        \PY{n}{Gcl} \PY{p}{=} \PY{n}{G1}\PY{o}{*}\PY{n}{Kp}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{+}\PY{n}{G1}\PY{o}{*}\PY{n}{Kp}\PY{p}{)}\PY{p}{;}
+        
+        \PY{p}{[}\PY{n}{ysim}\PY{p}{,}\PY{n}{tsim}\PY{p}{]}\PY{p}{=}\PY{n}{step}\PY{p}{(}\PY{n}{Gcl}\PY{p}{,}\PY{n}{t}\PY{p}{)}\PY{p}{;}\PY{c}{\PYZpc{}simulate without plotting so we store variables.}
+        
+        \PY{n+nb}{figure}
+        \PY{n+nb}{plot}\PY{p}{(}\PY{n}{tsim}\PY{p}{,}\PY{n}{ysim}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{k\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Time (s)\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{System Output (?)\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_6_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    As you can see, our controlled system does a pretty good job of getting
+to steady-state by 1 second, but there's a problem... one of our design
+goals was for the system to track the reference input \(r(s)\). Because
+\(r(s)\) was a unit step, we might have expected that our system would
+reach a steady-state value of 1, but it doesn't! To show how the
+system's error progresses over time, we can simply take the constant
+value of \(r(s)\) (which in this case was just 1) and subtract the
+system's output under closed loop control from \(r(s)\), since the error
+signal \(e(s)=r(s)-y(s)H(s)\). Alternatively, we could use some block
+diagram algebra to find the transfer function \(\frac{e(s)}{r(s)}\)
+directly. I'll leave the details of this to you to try (highly
+recommended for practice!), but if we do the reduction, we find that the
+transfer function \(\frac{e(s)}{r(s)}\) for our controlled system is:
+
+\begin{equation}
+\frac{e(s)}{r(s)} = \frac{s+1}{s+5}
+\end{equation}
+
+Applying the final value theorem can get us an answer about how much
+steady-state error we will have in response to a unit step input:
+
+\begin{equation}
+\lim_{t\rightarrow \infty} e(t) = \lim_{s\rightarrow 0} s e(s) = \lim_{s\rightarrow 0} s\frac{1}{s}\frac{s+1}{s+5} = 0.2
+\end{equation}
+
+So it appears that our controller, while it does meet the requirement to
+reach steady state within 1 second, doesn't do a great job of tracking
+our reference input! Unless we're ok with \(20\%\) tracking error even
+for a simple step input, we'll need something else to do better. Let's
+plot the system's error response using MATLAB/Octave:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c}{\PYZpc{}create our TF from e to y}
+        \PY{n}{G\PYZus{}e\PYZus{}y} \PY{p}{=} \PY{p}{(}\PY{n}{s}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{s}\PY{o}{+}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
+        
+        \PY{c}{\PYZpc{}now see how it responds to a step input}
+        
+        \PY{p}{[}\PY{n}{yey}\PY{p}{,}\PY{n}{tey}\PY{p}{]} \PY{p}{=} \PY{n}{step}\PY{p}{(}\PY{n}{G\PYZus{}e\PYZus{}y}\PY{p}{,}\PY{n}{t}\PY{p}{)}\PY{p}{;}
+        
+        \PY{n+nb}{figure}
+        \PY{n+nb}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{yey}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{k\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Time (s)\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{tracking error\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_8_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    It appears that the error acts as we'd expect. The error signal could
+also have been found by simply subtracting \(y\) from \(r\) given our
+original step response. To see how much system input would have been
+required to achieve this step response from our controller, we need to
+plot the step response of the transfer function \(\frac{u(s)}{r(s)}\),
+or in this case, we can simply multiply \(e(s)\) by \(K_p\). This
+implies that the maximum controller output needed for the unit step is
+\(4\) "units." These units could be voltage if our controller drove an
+electric motor, pump, solenoid, or similar electromechanical device, for
+instance.
+
+    \section{Exercise}\label{exercise}
+
+Design a P-controller for the following system such that it is
+overdamped with a dominant (slowest) time constant is at \(\tau=0.25s\).
+Simulate its response to a step input, and comment on its steady-state
+tracking error. Assume that the system measures its output perfectly
+with no scaling-\/- i.e. \(H(s)=1\). Include any hand-calculations and
+diagrams in the markdown cell. These can be typeset or scanned.
+
+\(P(s) = \frac{1}{(s+10)(s+1)}\)
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

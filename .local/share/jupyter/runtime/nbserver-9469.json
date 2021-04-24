@@ -1,0 +1,12 @@
+{
+  "base_url": "/user/herzs/",
+  "hostname": "127.0.0.1",
+  "notebook_dir": "/home/herzs",
+  "password": false,
+  "pid": 9469,
+  "port": 44589,
+  "secure": false,
+  "sock": "",
+  "token": "",
+  "url": "http://127.0.0.1:44589/user/herzs/"
+}

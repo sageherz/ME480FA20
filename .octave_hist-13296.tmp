@@ -1,0 +1,1000 @@
+error('No Answer Given!')
+_make_figures("/tmp/tmpuwjqbdno", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+omega = logspace(log10(minimum_freq),log10(maximum_freq),length);
+_make_figures("/tmp/tmp41kv30sh", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+omega = logspace(log10(minimum_freq),log10(maximum_freq),100);
+_make_figures("/tmp/tmpy34ibe8u", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)/sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+hold on;
+plot(w,magRatio1)
+plot(w,phaseLag1)
+hold off;
+_make_figures("/tmp/tmphiffef32", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)/sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmp59nf1v0j", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)/sqrt(w.^2 + 1^2)
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmpfyfqzwu2", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2)
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmp8omw24co", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmpiz5tw4n3", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1)
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmppc2ect50", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan(0,1) - atan(w,1)
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmpoyawnc42", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan(0/1) - atan(w/1)
+figure()
+hold on;
+loglog(w,magRatio1,'.')
+loglog(w,phaseLag1,'.')
+hold off;
+_make_figures("/tmp/tmp4v242628", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'.')
+figure()
+loglog(w,phaseLag1,'.')
+_make_figures("/tmp/tmpzc4svd2u", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmpopem43_e", "png", "Figure", -1, -1, 0, 0)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Magnitude Ratio as a Function of Frequency for P = 1/(s+1)')
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmp89reh9km", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title(strcat('Magnitude Ratio as a Function of Frequency for P = ',P1))
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmpdmpjcchw", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title(strcat('Magnitude Ratio as a Function of Frequency for P = ',P1))
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmpoc9pytvg", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+P1_title = latex(tfsym)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title(sprintf('Bode plot of: $$ %s $$', P1_title), 'Interpreter','latex')
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmprzxrynx1", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+P1_title = latex(P1)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title(sprintf('Bode plot of: $$ %s $$', P1_title), 'Interpreter','latex')
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmpzwe86qrp", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+P1_title = latex(P1)
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title(sprintf('Bode plot of: $$ %s $$', P1_title))
+figure()
+loglog(w,phaseLag1,'b.')
+_make_figures("/tmp/tmpj17ojjvy", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpkx_6qw8_", "png", "Figure", -1, -1, 0, 0)
+magRatio2 = sqrt(10^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag2 = atan2(0,10) - atan2(w,1);
+figure()
+loglog(w,magRatio2,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag2,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpv34q81nf", "png", "Figure", -1, -1, 0, 0)
+magRatio3 = sqrt(1^2 + 0^2)./sqrt(w.^2 + 100^2);
+phaseLag3 = atan2(0,1) - atan2(w,100);
+figure()
+loglog(w,magRatio3,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag3,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpq6zoufeg", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = abs(1./(w+1))
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpf7en5wy1", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = abs(1./(w+1));
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmp3osni2z1", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+magRatio1 = abs(1./(w*1j+1));
+phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpsbmzhhyo", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+num1 = 1;
+den1 = w.*1j + 1;
+magRatio1 = abs(num1./den1);
+phaseLag1 = ang(num1) - ang(den1);
+%magRatio1 = abs(1./(w*1j + 1));
+%phaseLag1 = atan2(0,1) - atan2(w,1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpjd19zedu", "png", "Figure", -1, -1, 0, 0)
+magRatio2 = sqrt(10^2 + 0^2)./sqrt(w.^2 + 1^2);
+phaseLag2 = atan2(0,10) - atan2(w,1);
+figure()
+loglog(w,magRatio2,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag2,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpidz9hjqb", "png", "Figure", -1, -1, 0, 0)
+num2 = 10;
+den2 = w.*1j + 1;
+magRatio2 = abs(num2./den2);
+phaseLag2 = ang(num2) - ang(den2);
+figure()
+loglog(w,magRatio2,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag2,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpqp5s83um", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+num1 = 1;
+den1 = w.*1j + 1;
+magRatio1 = abs(num1./den1);
+phaseLag1 = ang(num1) - ang(den1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpq0bzrgsl", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+num1 = 1;
+den1 = w.*1j + 1;
+magRatio1 = abs(num1./den1);
+phaseLag1 = angle(num1) - angle(den1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmp7sjhy9fu", "png", "Figure", -1, -1, 0, 0)
+num2 = 10;
+den2 = w.*1j + 1;
+magRatio2 = abs(num2./den2);
+phaseLag2 = angle(num2) - angle(den2);
+figure()
+loglog(w,magRatio2,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag2,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpx1c_8f6c", "png", "Figure", -1, -1, 0, 0)
+num3 = 1;
+den3 = w.*1j + 100;
+magRatio3 = abs(num3./den3);
+phaseLag3 = angle(num3) - angle(den3);
+figure()
+loglog(w,magRatio3,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag3,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmprfd623qf", "png", "Figure", -1, -1, 0, 0)
+num4 = w.*1j + 1;
+den4 = (w.*1j).^2 + 5.*w.*1j + 50;
+magRatio4 = abs(num4./den4);
+phaseLag4 = angle(num4) - angle(den4);
+figure()
+loglog(w,magRatio4,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag4,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpcflhifpq", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Mon Nov 09 13:28:47 2020 UTC <herzs@ip-10-1-3-136>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week12_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+num4 = abs(w.*1j + 1);
+den4 = abs((w.*1j).^2 + 5.*w.*1j + 50);
+magRatio4 = abs(num4./den4);
+phaseLag4 = angle(num4) - angle(den4);
+figure()
+loglog(w,magRatio4,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag4,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpf5r83jwi", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+%set up the system we wish to simulate
+P = 1/(s+1);
+%set up the input signal we will give to the system
+w = .5*pi;
+t = linspace(0,10,1000);
+U = 1;%unity sinusoidal input
+u = U*sin(w*t);%sinusoidal input
+%now simulate the system response to this input
+[y,t] = lsim(P,u,t);
+%now plot the input and output together to compare
+plot(t,u,t,y)
+legend('input','output')
+xlabel('Time (s)')
+ylabel('input and response')
+_make_figures("/tmp/tmpn782n0o7", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+num1 = 1;
+den1 = w.*1j + 1;
+magRatio1 = abs(num1./den1);
+phaseLag1 = angle(num1) - angle(den1);
+figure()
+loglog(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmp_uuug2_8", "png", "Figure", -1, -1, 0, 0)
+num2 = 10;
+den2 = w.*1j + 1;
+magRatio2 = abs(num2./den2);
+phaseLag2 = angle(num2) - angle(den2);
+figure()
+loglog(w,magRatio2,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag2,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmp_56pmv0j", "png", "Figure", -1, -1, 0, 0)
+num3 = 1;
+den3 = w.*1j + 100;
+magRatio3 = abs(num3./den3);
+phaseLag3 = angle(num3) - angle(den3);
+figure()
+loglog(w,magRatio3,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag3,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmptonosfts", "png", "Figure", -1, -1, 0, 0)
+num4 = abs(w.*1j + 1);
+den4 = abs((w.*1j).^2 + 5.*w.*1j + 50);
+magRatio4 = abs(num4./den4);
+phaseLag4 = angle(num4) - angle(den4);
+figure()
+loglog(w,magRatio4,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag4,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmps3j2h2ya", "png", "Figure", -1, -1, 0, 0)
+num4 = abs(w.*1j + 1);
+den4 = abs((w.*1j).^2 + 5.*w.*1j + 50);
+magRatio4 = num4./den4;
+phaseLag4 = angle(num4) - angle(den4);
+figure()
+loglog(w,magRatio4,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag4,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmp2i85ws36", "png", "Figure", -1, -1, 0, 0)
+num4 = w.*1j + 1;
+den4 = (w.*1j).^2 + 5.*w.*1j + 50;
+magRatio4 = abs(num4./den4);
+phaseLag4 = angle(num4) - angle(den4);
+figure()
+loglog(w,magRatio4,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+loglog(w,phaseLag4,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpy85321nd", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P1 = 1/(s+1);
+minimum_freq = 0.1;
+maximum_freq = 500;
+w = logspace(log10(minimum_freq),log10(maximum_freq),100);
+num1 = 1;
+den1 = w.*1j + 1;
+magRatio1 = abs(num1./den1);
+phaseLag1 = angle(num1) - angle(den1);
+figure()
+semilogx(w,magRatio1,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+semilogx(w,phaseLag1,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpc639hdvw", "png", "Figure", -1, -1, 0, 0)
+num2 = 10;
+den2 = w.*1j + 1;
+magRatio2 = abs(num2./den2);
+phaseLag2 = angle(num2) - angle(den2);
+figure()
+semilogx(w,magRatio2,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+semilogx(w,phaseLag2,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpr26nhx8f", "png", "Figure", -1, -1, 0, 0)
+num3 = 1;
+den3 = w.*1j + 100;
+magRatio3 = abs(num3./den3);
+phaseLag3 = angle(num3) - angle(den3);
+figure()
+semilogx(w,magRatio3,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+semilogx(w,phaseLag3,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpam_ah6z1", "png", "Figure", -1, -1, 0, 0)
+num4 = w.*1j + 1;
+den4 = (w.*1j).^2 + 5.*w.*1j + 50;
+magRatio4 = abs(num4./den4);
+phaseLag4 = angle(num4) - angle(den4);
+figure()
+semilogx(w,magRatio4,'r.')
+xlabel('Frequency (rad/s)')
+ylabel('Magnitude Ratio')
+title('Response Magnitude Ratio as a Function of Frequency')
+figure()
+semilogx(w,phaseLag4,'b.')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Lag (radians)')
+title('Response Phase Lag as a Function of Frequency')
+_make_figures("/tmp/tmpcsr6_4lb", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Tue Nov 10 13:14:33 2020 UTC <herzs@ip-10-1-3-119>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_7");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% loading data...
+data_load = load('StepResponse_Weighted8.txt');
+time_load = data_load(:,1)*10^-6; % time (s)
+Vs_load = data_load(:,3); % voltages (V)
+V0_load = Vs_load(1); % initial voltage (V)
+startIndex_load = find(Vs_load>V0_load,1,'first'); % finding index where votlage step occurs
+tstart_load = time_load(startIndex_load); % time where voltage step occurs
+Vin_load = Vs_load(startIndex_load); % magnitude of input voltage after step (V)
+omega_load = data_load(:,4); % angular speed (rad/s)
+omega0_load = mean(omega_load(1:20)) % initial angular speed (rad/s)
+omegass_load = mean(omega_load(end-20:end)) % steady state angular speed after voltage step (rad/s)
+omega_trimmed = omega_load(startIndex_load:end); % trimmed angular speeds to only include after the voltage step
+time_trimmed = time_load(startIndex_load:end)-tstart_load; % trimmed time to only include after the voltage step
+% finding time constant (tau)
+omegatau_load = (0.632*(omegass_load - omega0_load))+omega0_load; 
+tau_load = time_load(find(omega_load<omegatau_load,1,'last'))-tstart_load 
+a = 1/tau_load
+A = ((omegass_load-omega0_load)*a)/(Vin_load-V0_load)
+% plotting model against experimental data...
+s = tf('s');
+GH_load1 = A/(s+a) % first order piece of third order system
+[ysim_load1,tsim_load1]=step(GH_load1,time_trimmed);
+ymodel_load1 = ((Vin_load-V0_load)*ysim_load1)+omega0_load;
+figure
+hold on;
+plot(time_load(startIndex_load:end)-tstart_load,omega_load(startIndex_load:end))
+plot(tsim_load1,ymodel_load1)
+title('Comparison of Plant Model to Experimental Data for the Mass-Spring System')
+xlabel('Time (s)')
+ylabel('Angular Velocity (rad/s)')
+legend('Experimental Data','First Order Plant','location','southeast')
+hold off;
+_make_figures("/tmp/tmp16lo938o", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Nov 13 12:01:38 2020 UTC <herzs@ip-10-1-3-119>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_2_Report");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+addpath("/usr/local/lib/python3.6/dist-packages/oct2py");
+exist("cd")
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmp5g9r__tk/writer.mat", "/tmp/tmp5g9r__tk/reader.mat");
+# Octave 4.2.2, Fri Nov 13 20:16:41 2020 UTC <herzs@ip-10-1-3-231>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_2_Report");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+addpath("/usr/local/lib/python3.6/dist-packages/oct2py");
+exist("cd")
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmp_grjso5w/writer.mat", "/tmp/tmp_grjso5w/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmp_grjso5w/writer.mat", "/tmp/tmp_grjso5w/reader.mat");
+# Octave 4.2.2, Fri Nov 13 20:17:23 2020 UTC <herzs@ip-10-1-3-231>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_2_Report");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+addpath("/usr/local/lib/python3.6/dist-packages/oct2py");
+exist("cd")
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmpgpvsk8ll", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmpp95_6xb4", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmpnrves07f", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmp85aiyv5h", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmp6mdjw32g", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmpo4g_otkk", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmpjpwj75iq", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+set(0, 'defaultfigurevisible', 'on');
+graphics_toolkit('gnuplot');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+_pyeval("/tmp/tmphhj9tkjo/writer.mat", "/tmp/tmphhj9tkjo/reader.mat");
+_make_figures("/tmp/tmpf_2201lj", "png", "__ipy_oct_fig_", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Nov 13 20:58:36 2020 UTC <herzs@ip-10-1-3-231>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week13_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+clear all
+s = tf('s');
+P1 = 10/(s+1);
+P2 = 10/(s^2+2*s+1);
+bode(P1,P2)
+_make_figures("/tmp/tmp82dbfhqf", "png", "Figure", -1, -1, 0, 0)
+A = 10;
+a = 1;
+P1 = A/(s+a);
+[mag1,phase1,w1] = bode(P1);%doesn't plot. We'll have to do that
+%find frequencies less than the eigenvalue
+lowfreq = w1(find(w1<=a));
+%find frequencies higher than the eigenvalue
+highfreq = w1(find(w1>=a));
+%compute the two asymptotes, converting to decibels
+asymp_high = 20*(log10(A/a) - log10(highfreq) - log10(1/a));
+asymp_low = 20*log10(A/a)*ones(size(lowfreq)) ;
+%plot results
+semilogx(w1,20*log10(mag1))
+hold on
+semilogx(lowfreq,asymp_low,'k','LineWidth',5,highfreq,asymp_high,'r','LineWidth',5)
+ylim([-20 30])
+xlabel('frequency (rad/s)')
+ylabel('Magnitude (dB)')
+legend('MATLAB','Low Freq Asymptote','High Freq Asymptote')
+grid on
+_make_figures("/tmp/tmpfen_xua9", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+wn = 1;
+zeta = 1;
+K = 10;
+P2 = K*wn^2/(s^2+2*zeta*wn*s+wn^2);
+[mag2,phase2,w2] = bode(P2);%doesn't plot. We'll have to do that
+%find frequencies less than the eigenvalue
+lowfreq = w2(find(w2<=wn));
+%find frequencies higher than the eigenvalue
+highfreq = w2(find(w2>=wn));
+%compute the two asymptotes, converting to decibels
+asymp_high = 20*(log10(K) - 2*log10(highfreq) + log10(wn));
+asymp_low = 20*log10(K)*ones(size(lowfreq)) ;
+%plot results
+semilogx(w2,20*log10(mag2))
+hold on
+semilogx(lowfreq,asymp_low,'k','LineWidth',5,highfreq,asymp_high,'r','LineWidth',5)
+ylim([-40 30])
+xlabel('frequency (rad/s)')
+ylabel('Magnitude (dB)')
+legend('MATLAB','Low Freq Asymptote','High Freq Asymptote')
+grid on
+_make_figures("/tmp/tmpxp99z1qk", "png", "Figure", -1, -1, 0, 0)
+wn = 100;
+zeta = 0.1;
+z = 1;%system 1st order zero
+K = 10*wn^2/z;%system steady state gain is the number in front of wn^2/z
+P3 = K*(s+z)/(s^2+2*zeta*wn*s + wn^2);
+[mag3,phase3,w3]=bode(P3);
+%find frequencies less than the zero
+lowfreq = w3(find(w3<=z));
+%find frequencies higher than the zero but lower than the eigenvalue
+midfreq = w3((w3>=z));
+midfreq = midfreq(midfreq<=wn);
+%find high frequencies
+highfreq = w3(w3>=wn);
+%compute the three asymptotes, converting to decibels
+asymp_mid = 20*(log10(K*z/wn^2)+log10(midfreq));
+asymp_high = 20*(log10(K*z/wn^2)+log10(wn) - log10(highfreq) + log10(wn));
+asymp_low = 20*log10(K*z/wn^2)*ones(size(lowfreq)) ;
+%plot results
+semilogx(w3,20*log10(mag3))
+hold on
+semilogx(lowfreq,asymp_low,'k','LineWidth',5,midfreq,asymp_mid,'g','LineWidth',3,highfreq,asymp_high,'r','LineWidth',5)
+%ylim([-40 30])
+xlabel('frequency (rad/s)')
+ylabel('Magnitude (dB)')
+legend('MATLAB','Low Freq Asymptote','Mid Freq Asymptote','High Freq Asymptote')
+grid on
+_make_figures("/tmp/tmpwkjidmit", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+A = 10;
+a = 1;
+P1 = A/(s+a);
+bode(P1)
+_make_figures("/tmp/tmp5vsg5od8", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+A = 10;
+a = 1;
+P1 = A/(s+a);
+[mag1,phase1,w1] = bode(P1);
+%asymptote will drop 90 degrees in 2 powers of 10 (slope of -1/2) or 45 degrees in 1, centered about the eigenvalue\
+%log(a) - log(freq_low) = 1
+%-> freq_low = 10^(log10(a)-1);
+log_freq_low = a/5;
+log_freq_high = 5*a;
+log_freq_min = 10^-2;%minimum we want to plot
+log_freq_max = 10^2;%maximum we want to plot
+asymptotic_x = [log_freq_min log_freq_low log_freq_high log_freq_max];
+asymptotic_y = [ 0 0 -90 -90];
+% just for fun, double check the slope is correct! Draw just the tangent line in point-slope form
+%line is in degrees, so we need to scale by 180/pi also
+tangent_line = 180/pi*(log(10)*-1/2*(log10(w1)-log10(a))-pi/4);
+semilogx(w1,phase1,asymptotic_x,asymptotic_y,'k','LineWidth',5,w1,tangent_line,'r','LineWidth',5)
+grid on
+_make_figures("/tmp/tmp7jgmiyxh", "png", "Figure", -1, -1, 0, 0)
+a1 = 1;
+a2 = 100;
+P2 = 1/((s+a1)*(s+a2));
+[mag,phase,w] = bode(P2);
+%asymptotic approximations:
+%for the first pole
+log_freq_low_1 = a1/5;
+log_freq_high_1 = 5*a1;
+log_freq_min_1 = 10^-1;%minimum we want to plot
+log_freq_max_1 = 10^3;%maximum we want to plot
+asymptotic_x_1 = [log_freq_min_1 log_freq_low_1 log_freq_high_1 log_freq_max_1];
+asymptotic_y_1 = [ 0 0 -90 -90];
+%for the second pole
+log_freq_low_2 = a2/5;
+log_freq_high_2 = 5*a2;
+log_freq_min_2 = 10^-1;%minimum we want to plot
+log_freq_max_2 = 10^3;%maximum we want to plot
+asymptotic_x_2 = [log_freq_min_2 log_freq_low_2 log_freq_high_2 log_freq_max_2];
+asymptotic_y_2 = [ 0 0 -90 -90];
+%now get each on the same frequency vector as the "real" bode plot so we can add them up.
+%we do this using linear interpolation, which is "interp1" in MATLAB/Octave
+wlin = sort([log_freq_min_1 log_freq_low_1 log_freq_high_1 log_freq_low_2 log_freq_high_2 log_freq_max_2]);
+asymptotic_y_1_interp = interp1(asymptotic_x_1,asymptotic_y_1,(wlin),'linear');
+asymptotic_y_2_interp = interp1(asymptotic_x_2,asymptotic_y_2,(wlin),'linear');
+%now compute the total asymptotic by just adding those two plots together!
+asymptotic_tot = asymptotic_y_1_interp+asymptotic_y_2_interp;
+%now plot the results
+semilogx(w,phase,wlin,asymptotic_y_1_interp,'g','LineWidth',5,wlin,asymptotic_y_2_interp,'r','LineWidth',5,wlin,asymptotic_tot,'k','LineWidth',5)
+legend('Octave','Asymptotic for pole 1','Asymptotic for pole 2','Total')
+xlabel('Frequency (rad/s)')
+ylabel('Phase Shift (deg)')
+_make_figures("/tmp/tmpwsrp533a", "png", "Figure", -1, -1, 0, 0)
+P = (s+1)/((s+100)*(s+10000));
+[mag,phase,w] = bode(P);
+semilogx(w,phase,'k','LineWidth',5)
+xlabel('Frequency (rad/s)')
+ylabel('Phase Shift (deg)')
+_make_figures("/tmp/tmpdhbdkb1t", "png", "Figure", -1, -1, 0, 0)
+zetas = .1:.1:1;
+wn = 1;
+w = logspace(-2,2,100);
+magvec = zeros(length(zetas),length(w));
+phasevec = zeros(length(zetas),length(w));
+for k = 1:length(zetas)
+    P = wn^2/(s^2+2*zetas(k)*wn*s+wn^2);
+    [mag,phase] = bode(P,w);
+    magvec(k,:) = mag;
+    phasevec(k,:) = phase;
+    legendinfo{k} = ['zeta = ' num2str(zetas(k))];
+end
+figure
+subplot(2,1,1)
+semilogx(w,20*log10(magvec))
+ylabel('Magnitude Ratio (dB)')
+subplot(2,1,2)
+semilogx(w,phasevec)
+legend(legendinfo)
+xlabel('frequency (rad/s)')
+ylabel('Phase shift (degrees)')
+_make_figures("/tmp/tmp_xy4l0pd", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmptsrqi6ry", "png", "Figure", -1, -1, 0, 0)
+% YOUR CODE HERE
+error('No Answer Given!')
+_make_figures("/tmp/tmple9l2ybi", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = (1200*(s+10))/((s+1)*(s+1000));
+bode(P)
+_make_figures("/tmp/tmpn395lqkt", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = (500)/((s+10)*(s+100));
+bode(P)
+_make_figures("/tmp/tmpi1j7bfud", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = (1200*(s+10))/(s*(s+1)*(s+1000));
+% let's choose to start @ w = 10^(-1) = 0.1...
+mag_P_at_start = abs((1200*(0.1*1j+10))/((0.1*1j)*(0.1*1j+1)*(0.1*1j+1000)))
+_make_figures("/tmp/tmp9bofnnms", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+P = (1200*(s+10))/(s*(s+1)*(s+1000));
+% let's choose to start @ w = 10^(-1) = 0.1...
+mag_P_at_start = abs((1200*(0.1*1j+10))/((0.1*1j)*(0.1*1j+1)*(0.1*1j+1000)))
+bode(P)
+_make_figures("/tmp/tmpzdmiddqf", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sun Nov 15 07:54:44 2020 UTC <herzs@ip-10-1-3-231>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_6");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Tue Nov 17 21:12:24 2020 UTC <herzs@ip-10-1-3-163>

@@ -1,0 +1,1000 @@
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp8uvtk61r", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp9vk050zm", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987+2;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmphurjbqmd", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp = 25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpx2ntl23w", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =25.605;
+Gcl = (0.01*D^2*Rnom*omegabar*Kp)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar))+(0.01*D^2*Rnom*omegabar*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpt_e_h0tq", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller1.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =25.605;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp5gw3ba4z", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =36.2738;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+xlim([0 3]);
+ylim([0 13]);
+hold off;
+_make_figures("/tmp/tmpn8eteny_", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+xlim([0 3]);
+ylim([0 13]);
+hold off;
+_make_figures("/tmp/tmpj6q9fhu9", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpotc3kklu", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmp0hoizf1_", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+%t = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,t);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmprc4ed8xh", "png", "Figure", -1, -1, 0, 0)
+data = load('damdata_pcontroller2.txt');
+t = data(:,1);
+y = data(:,4)*2*pi*(1/60);
+%Set up parameters of the models
+J = 4250;
+b = 2000;
+D = 1;
+Rnom = 1.936E4;
+omegabar = 10.987;
+ubar = 40;
+% P Controller Model...
+s = tf('s');
+time = 0:.001:5;%go a little past where we said the system should be at steady state
+G1 = (0.01*D^2*Rnom*omegabar)/(J*s+(b+(D^2*Rnom)-(0.01*D^2*Rnom*ubar)));
+Kp =57.6113;
+Gcl = G1*Kp/(1+G1*Kp);
+[ysim,tsim]=step(Gcl,time);%simulate without plotting so we store variables.
+ysim= ysim+omegabar;
+figure
+hold on;
+plot(tsim,ysim,'k')
+plot(t,y,'r.')
+xlabel('Time (s)')
+ylabel('System Output (?)')
+hold off;
+_make_figures("/tmp/tmpufswnqy4", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Wed Sep 16 19:10:39 2020 UTC <herzs@ip-10-1-3-199>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_4");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+data = load('ExperimentalData.txt');
+t = data(:,1);
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+_make_figures("/tmp/tmp3fg5c_l3", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt');
+t = data(:,1);
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+_make_figures("/tmp/tmphpai7in0", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+_make_figures("/tmp/tmpu292_fns", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+figure
+plot(time,omega,'b.')
+_make_figures("/tmp/tmpjop1n0uz", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input of 5V')
+_make_figures("/tmp/tmp7u2sg2k5", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input')
+_make_figures("/tmp/tmp98b2wn5w", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input of 5V')
+_make_figures("/tmp/tmpm5hapzkp", "png", "Figure", -1, -1, 0, 0)
+data_weight = load('ExperimentalData_weighted.txt'); 
+t_weight = data_weight(:,1);
+t0_weight = t_weight(1);
+time_weight = (t_weight-t0_weight).*10^-6;
+v0_weight = data_weight(:,2);
+v_weight = data_weight(:,3);
+omega_weight = data_weight(:,4);
+figure
+plot(time_weight,omega_weight,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor with Brass Inertia when Given a Step Input of 5V')
+_make_figures("/tmp/tmpyfh3ezmj", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input')
+_make_figures("/tmp/tmpvjh78k9a", "png", "Figure", -1, -1, 0, 0)
+data_weight = load('ExperimentalData_weighted.txt'); 
+t_weight = data_weight(:,1);
+t0_weight = t_weight(1);
+time_weight = (t_weight-t0_weight).*10^-6;
+v0_weight = data_weight(:,2);
+v_weight = data_weight(:,3);
+omega_weight = data_weight(:,4);
+figure
+plot(time_weight,omega_weight,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor with Brass Inertia when Given a Step Input')
+_make_figures("/tmp/tmp6g72ovq9", "png", "Figure", -1, -1, 0, 0)
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+omega_ss = mean(omega(end-10:end))
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input')
+_make_figures("/tmp/tmp0jdn7you", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Sep 17 22:32:20 2020 UTC <herzs@ip-10-1-3-16>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week05_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+data = load('pond_height.txt');
+time = data(:,1);% time recorded in seconds
+height = data(:,2);%pond height recorded in meters
+figure
+plot(time,height)
+xlabel('Time (s)')
+ylabel('Pond Height (m)')
+_make_figures("/tmp/tmp0s542yc5", "png", "Figure", -1, -1, 0, 0)
+h0 = 0.3;
+hss = 0; 
+htau = 0.368*h0;
+tau = time(find(height>htau,1,'last'))
+_make_figures("/tmp/tmp8aepnwck", "png", "Figure", -1, -1, 0, 0)
+%Set up parameters of the model
+Cf = 8.03E-5;
+Rf = 7.29E5;
+Ki = 0.359581;
+Kp = 0.614684;
+rho = 997;
+g = 9.81;
+hbar = 0.3;
+% P Controller Model...
+s = tf('s');
+P = 1/(rho*g*(Cf*s+(1/Rf)));
+C = Kp + (1/s)*Ki;
+Gcl = P*C/(1+P*C);
+[ysim,tsim]=step(Gcl,50);
+ysim= (0.1*ysim)+hbar;
+% plotting...
+figure
+plot(tsim,ysim,'r')
+xlabel('Time (s)')
+ylabel('Height of Pond (m)')
+title('PI-Controller Model to Maintain Pond Height')
+_make_figures("/tmp/tmpbrhrtwbk", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sat Sep 19 21:43:54 2020 UTC <herzs@ip-10-1-3-103>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_4");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+omega_0 = omega(find(v>2.01,1,'first'));
+omega_ss = mean(omega(end-10:end))-omega_0
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input')
+_make_figures("/tmp/tmps0sp3ilo", "png", "Figure", -1, -1, 0, 0)
+data_weight = load('ExperimentalData_weighted5.txt'); 
+t_weight = data_weight(:,1);
+t0_weight = t_weight(1);
+time_weight = (t_weight-t0_weight).*10^-6;
+v0_weight = data_weight(:,2);
+v_weight = data_weight(:,3);
+omega_weight = data_weight(:,4);
+figure
+plot(time_weight,omega_weight,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor with Brass Inertia when Given a Step Input')
+_make_figures("/tmp/tmpkdc0fj0d", "png", "Figure", -1, -1, 0, 0)
+omega0_weight = mean(omega_weight(400:500));
+omegass_weight = mean(omega_weight(end-100:end));
+omegatau_weight = (0.632*(omegass_weight - omega0_weight))+omega0_weight;
+t_start = time_weight(find(v_weight>2.51,1,'first'));
+tau_weight = time_weight(find(omega_weight<omegatau_weight,1,'last'))-t_start
+_make_figures("/tmp/tmp6utk97qb", "png", "Figure", -1, -1, 0, 0)
+% CHECKING MODEL...
+Kt = 0.0484;
+R = 4;
+b = 0.001898;
+b_weight = 1.863E-4;
+J_motor = 2.45955E-4;
+J_brass = 1.09E-4;
+J_tot = J_motor+J_brass;
+s = tf('s');
+TF_unweight = Kt/((R*J_motor)*s + (Kt^2 + R*b));
+[ysim_unweight,tsim_unweight]=step(TF_unweight,6);
+y_unweight = (2.99*ysim_unweight)+omega_0;
+TF_weight = Kt/((R*J_tot)*s + (Kt^2 + R*(b+b_weight)));
+[ysim_weight,tsim_weight]=step(TF_weight,6);
+y_weight = (2.49*ysim_weight)+omega0_weight;
+figure
+hold on
+plot(time(265:end)-time(265),omega(265:end),'b.')
+plot(time_weight(582:end)-time_weight(582),omega_weight(582:end),'r.')
+plot(tsim_unweight,y_unweight,'k')
+plot(tsim_weight,y_weight,'m')
+legend('Experimental (unweighted)','Experimental (weighted)','Model (unweighted)','Model (weighted)','location','southeast')
+hold off
+_make_figures("/tmp/tmp3tal2v_k", "png", "Figure", -1, -1, 0, 0)
+data_coast = load('ExperimentalData_coastdown.txt');
+t_coast = data_coast(:,1);
+t0_coast = t_coast(1);
+time_coast = (t_coast-t0_coast).*10^-6;
+omega_coast = data_coast(:,4);
+v_coast = data_coast(:,3);
+omega0_coast = mean(omega_coast(15:100));
+figure
+plot(time_coast,omega_coast,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Coast Down Angular Speed of Motor with Brass Inertia')
+_make_figures("/tmp/tmp0axda84h", "png", "Figure", -1, -1, 0, 0)
+Td = 0.014138;
+TF_coast = (Td*R)/((R*J_tot)*s + (Kt^2 + R*(b+b_weight)));
+[ysim_coast,tsim_coast]=step(TF_coast,3);
+y_coast = (-5*ysim_coast)+omega_coast(100);
+figure
+hold on
+plot(tsim_coast,y_coast,'r')
+plot(time_coast(100:end)-time_coast(100),omega_coast(100:end),'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Coast Down Angular Speed of Motor with Brass Inertia')
+hold off
+_make_figures("/tmp/tmpz5mvucxe", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Tue Sep 22 01:53:50 2020 UTC <herzs@ip-10-1-3-103>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Lab_4");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+data = load('ExperiementalData.txt'); % lol i spelled that wrong
+t = data(:,1);
+t0 = t(1);
+time = (t-t0).*10^-6;
+v0 = data(:,2);
+v = data(:,3);
+omega = data(:,4);
+omega_0 = omega(find(v>2.01,1,'first'));
+omega_ss = mean(omega(end-10:end))-omega_0
+figure
+plot(time,omega,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor when Given a Step Input')
+_make_figures("/tmp/tmp4w1048l4", "png", "Figure", -1, -1, 0, 0)
+data_weight = load('ExperimentalData_weighted5.txt'); 
+t_weight = data_weight(:,1);
+t0_weight = t_weight(1);
+time_weight = (t_weight-t0_weight).*10^-6;
+v0_weight = data_weight(:,2);
+v_weight = data_weight(:,3);
+omega_weight = data_weight(:,4);
+figure
+plot(time_weight,omega_weight,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Angular Speed of Motor with Brass Inertia when Given a Step Input')
+_make_figures("/tmp/tmpeza69a1v", "png", "Figure", -1, -1, 0, 0)
+omega0_weight = mean(omega_weight(400:500));
+omegass_weight = mean(omega_weight(end-100:end));
+omegatau_weight = (0.632*(omegass_weight - omega0_weight))+omega0_weight;
+t_start = time_weight(find(v_weight>2.51,1,'first'));
+tau_weight = time_weight(find(omega_weight<omegatau_weight,1,'last'))-t_start
+_make_figures("/tmp/tmpv6q88ssy", "png", "Figure", -1, -1, 0, 0)
+% CHECKING MODEL...
+Kt = 0.0484;
+R = 4;
+b = 0.001898;
+b_weight = 1.863E-4;
+J_motor = 2.45955E-4;
+J_brass = 1.09E-4;
+J_tot = J_motor+J_brass;
+s = tf('s');
+TF_unweight = Kt/((R*J_motor)*s + (Kt^2 + R*b));
+[ysim_unweight,tsim_unweight]=step(TF_unweight,6);
+y_unweight = (2.99*ysim_unweight)+omega_0;
+TF_weight = Kt/((R*J_tot)*s + (Kt^2 + R*(b+b_weight)));
+[ysim_weight,tsim_weight]=step(TF_weight,6);
+y_weight = (2.49*ysim_weight)+omega0_weight;
+figure
+hold on
+plot(time(265:end)-time(265),omega(265:end),'b.')
+plot(time_weight(582:end)-time_weight(582),omega_weight(582:end),'r.')
+plot(tsim_unweight,y_unweight,'k')
+plot(tsim_weight,y_weight,'m')
+legend('Experimental (unweighted)','Experimental (weighted)','Model (unweighted)','Model (weighted)','location','southeast')
+hold off
+_make_figures("/tmp/tmp0ta_z5cb", "png", "Figure", -1, -1, 0, 0)
+data_coast = load('ExperimentalData_coastdown.txt');
+t_coast = data_coast(:,1);
+t0_coast = t_coast(1);
+time_coast = (t_coast-t0_coast).*10^-6;
+omega_coast = data_coast(:,4);
+v_coast = data_coast(:,3);
+omega0_coast = mean(omega_coast(15:100));
+figure
+plot(time_coast,omega_coast,'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Coast Down Angular Speed of Motor with Brass Inertia')
+_make_figures("/tmp/tmpuzcv5wgb", "png", "Figure", -1, -1, 0, 0)
+Td = 0.014138;
+TF_coast = (Td*R)/((R*J_tot)*s + (Kt^2 + R*(b+b_weight)));
+[ysim_coast,tsim_coast]=step(TF_coast,3);
+y_coast = (-5*ysim_coast)+omega_coast(100);
+figure
+hold on
+plot(tsim_coast,y_coast,'r')
+plot(time_coast(100:end)-time_coast(100),omega_coast(100:end),'b.')
+xlabel('Time(s)')
+ylabel('Angular Speed (rad/s)')
+title('Coast Down Angular Speed of Motor with Brass Inertia')
+hold off
+_make_figures("/tmp/tmpal_lmqs7", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Thu Sep 24 00:04:34 2020 UTC <herzs@ip-10-1-3-103>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Exam_1");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+Kt = .8731;
+R = 2.18;
+data1 = load('step1data.txt');
+t1 = data1(:,1);
+omega1 = data1(:,3);
+omega1ss = mean(omega1(end-50:end));
+vs1 = data1(end,2);
+data2 = load('step2data.txt');
+t2 = data2(:,1);
+omega2 = data2(:,3);
+omega2ss = mean(omega2(end-50:end));
+vs2 = data2(end,2);
+b = ((vs2-vs1)*Kt - Kt^2*(omega2ss-omega1ss))/(R*(omega2ss-omega1ss))
+_make_figures("/tmp/tmpcyambl93", "png", "Figure", -1, -1, 0, 0)
+% calculate lumped J 
+m = 2;
+r = 0.3;
+J_mass = 0.5*m*r^2;
+J_m = 1.0E-3;
+J = J_mass+J_m;
+% using TF I am going to simulate the second data set (6V-->8V)
+s = tf('s');
+TF = Kt/((R*J)*s + (Kt^2 + R*b));
+[ysim,tsim]=step(TF,2);
+y_model = ((vs2-vs1)*ysim)+omega1ss;
+% plotting model prediction against actual data
+figure(1)
+hold on
+plot(t2,omega2,'b.')
+plot(tsim,y_model,'r')
+legend('Experimental','Model','location','southeast')
+xlabel('Time (s)')
+ylabel('Turntable Angular Speed (rad/s)')
+title('Model Comparison to Data Set 2')
+hold off
+%plotting model against first data set
+y_model1 = (vs1*ysim);
+figure(2)
+hold on
+plot(t1,omega1,'b.')
+plot(tsim,y_model1,'r')
+legend('Experimental','Model','location','southeast')
+xlabel('Time (s)')
+ylabel('Turntable Angular Speed (rad/s)')
+title('Model Comparison to Data Set 1')
+hold off
+_make_figures("/tmp/tmp6fbnm7us", "png", "Figure", -1, -1, 0, 0)
+%Set up parameters of the model
+Ki = 30.5338;
+Kp = 2.6606;
+omegabar = 6;
+stepmag = 2;
+% P Controller Model...
+s = tf('s');
+P = Kt/((R*J)*s + (Kt^2 + R*b));
+C = Kp + (1/s)*Ki;
+Gcl = P*C/(1+P*C);
+[ysim,tsim]=step(Gcl,2);
+ysim= (stepmag*ysim)+omegabar;
+% plotting...
+figure
+hold on
+plot(tsim,ones(length(tsim))*8,'k--')
+plot(tsim,ysim,'r')
+xlabel('Time (s)')
+ylabel('Turntable Angular Velocity (rad/s)')
+title('PI-Controller Model to Rotate Turntable at Desired Angular Velocity')
+hold off
+_make_figures("/tmp/tmp03yz0vak", "png", "Figure", -1, -1, 0, 0)
+J_new = 2*J_mass+J_m
+P_new = Kt/((R*J_new)*s + (Kt^2 + R*b));
+Gcl_new = P_new*C/(1+P_new*C);
+[ymodel,tmodel]=step(Gcl_new,2);
+ymodel= (stepmag*ymodel)+omegabar;
+% plotting...
+figure
+hold on
+plot(tmodel,ones(length(tmodel))*8,'k--')
+plot(tmodel,ymodel,'r')
+xlabel('Time (s)')
+ylabel('Turntable Angular Velocity (rad/s)')
+title('PI-Controller Model to Rotate Turntable at Desired Angular Velocity')
+hold off
+% finding settling time
+for j = length(ymodel)-1:-1:1 % starting from last data point and iterating backwards
+    y_diff = abs((8-ymodel(j))/8)*100; % calculating percent difference
+    if y_diff > 2 % checking if greater than 2%
+        break; % stopping for loop if above 2%
+    end
+end
+ts = tmodel(j)
+% finding % overshoot
+ymax = max(ymodel);
+PO = ((ymax-8)/8)*100
+_make_figures("/tmp/tmpcexgi8r6", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Fri Sep 25 01:46:36 2020 UTC <herzs@ip-10-1-3-103>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Project_1_Supplemental");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 4.2.2, Thu Oct 01 18:40:56 2020 UTC <herzs@ip-10-1-3-254>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week07_Monday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+close all
+clear all
+s = tf('s');
+%let's say your closed loop transfer function was the following for a particular gain Kp
+P = 10/((s+5)*(s+10));
+H = 1;
+K = linspace(0,10,101);
+figure()
+hold on;
+for i = 1:length(K)
+C = K(i);
+Gcl = (C*P/(1+C*P*H));
+%to extract the denominator coefficients as vectors of decreasing power of s, we can do this:
+[num,den] = tfdata(Gcl,'v');% the 'v' argument tells it to return these as a vector rather than cell array.
+%now, we can use the 'roots' function to find the roots of the characteristic equation
+myroots = roots(den);
+%to plot the real vs. imaginary components on a graph, we can do the following thing:
+plot(real(myroots),imag(myroots),'kx')
+end
+grid on
+title('Plot of Eigenvalues on the s Plane with Varying Kp')
+xlabel('real component ')
+ylabel('imaginary component')
+hold off;
+_make_figures("/tmp/tmpau2463ly", "png", "Figure", -1, -1, 0, 0)
+close all
+clear all
+s = tf('s');
+%let's say your closed loop transfer function was the following for a particular gain Kp
+P = 10/((s+5)*(s+10));
+H = 1;
+K = linspace(0,10,101);
+figure()
+hold on;
+for i = 1:length(K)
+C = K(i);
+Gcl = (C*P/(1+C*P*H));
+%to extract the denominator coefficients as vectors of decreasing power of s, we can do this:
+[num,den] = tfdata(Gcl,'v');% the 'v' argument tells it to return these as a vector rather than cell array.
+%now, we can use the 'roots' function to find the roots of the characteristic equation
+myroots = roots(den);
+%to plot the real vs. imaginary components on a graph, we can do the following thing:
+plot(real(myroots),imag(myroots),'kx')
+end
+grid on
+title('Plot of Eigenvalues on the s Plane with Varying Kp')
+xlabel('real component ')
+ylabel('imaginary component')
+hold off;
+_make_figures("/tmp/tmpcw26ep9z", "png", "Figure", -1, -1, 0, 0)
+clear all
+%define our complex numbers s1 and s2
+s1 = -3+2j
+s2 = 1+3j
+%addition and subtraction
+s3 = s1+s2
+s4 = s1-s2
+%multiplication and division
+s5 = s1*s2
+s6 = s1/s2
+%extract the real component from a complex number
+s5_real = real(s5)
+%extract the imaginary component from a complex number
+s5_imag = imag(s5)
+_make_figures("/tmp/tmprtcpbfvb", "png", "Figure", -1, -1, 0, 0)
+s5
+s5_exponentialform = 3.60555*3.16228*exp((2.55359+1.24905)*j)
+_make_figures("/tmp/tmpppc6f_03", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+P = (s^2+s+10)/((s+1)*(s+15)*(s^2+.5*s+4)*(s^2+10*s+30));
+rlocus(P);
+_make_figures("/tmp/tmpxz4vv6tt", "png", "Figure", -1, -1, 0, 0)
+help rlocus
+_make_figures("/tmp/tmp6dc2cj2s", "png", "Figure", -1, -1, 0, 0)
+clear all
+s = tf('s');
+z = 100;%this is our choice of zero location for the PI controller (we don't know HOW to choose this yet... we just picked it)
+P = 1/(s+1);
+H = 1;
+Cstar = (s+100)/(s);
+G = Cstar*P;
+%plot the root locus
+rlocus(G*H)
+figure
+rlocus(G*H,0.1)
+xlim([-5 0])
+ylim([-20 20])
+%we used the magnitude criteria to find that, for our desired pole:
+K = 0.0025;
+%we decided that in our controller, C(s) = ksum*(kp + ki/s), we would keep ksum=1, so
+Ksum = 1;%our choice (either kp or ksum is our choice)
+Kp = K/Ksum;%just algebra here
+%now we find Ki based on our chosen zero location z=100
+%z = Ki/Kp so
+Ki = z*Kp;
+%now we can implement our controller, and check out the step response to make sure it makes sense for having an eigenvalue at s=-0.5
+C = Ksum*(Kp+Ki/s);
+Gcl = minreal(C*P/(1+C*P*H))
+figure
+step(Gcl)
+_make_figures("/tmp/tmpg4n61d_h", "png", "Figure", -1, -1, 0, 0)
+% for s = -11...
+clear all
+s = tf('s');
+P = 10/(s+5);
+H = 1;
+%we used the magnitude criteria to find that, for our desired pole:
+K = 0.6
+%now we can implement our controller, and check out the step response to make sure it makes sense for having an eigenvalue at s=-0.5
+C = K;
+Gcl = minreal(C*P/(1+C*P*H))
+figure
+step(Gcl)
+_make_figures("/tmp/tmpimcv_g7e", "png", "Figure", -1, -1, 0, 0)
+% for s = -7.5
+clear all
+s = tf('s');
+P = 10/((s+5)*(s+10));
+H = 1;
+%we used the magnitude criteria to find that, for our desired pole:
+K = 0.625
+%now we can implement our controller, and check out the step response to make sure it makes sense for having an eigenvalue at s=-0.5
+C = K;
+Gcl = minreal(C*P/(1+C*P*H))
+figure
+step(Gcl)
+_make_figures("/tmp/tmpq7vbogln", "png", "Figure", -1, -1, 0, 0)
+% for s = -7.5 + j
+clear all
+s = tf('s');
+P = 10/((s+5)*(s+10));
+H = 1;
+%we used the magnitude criteria to find that, for our desired pole:
+K = 0.725
+%now we can implement our controller, and check out the step response to make sure it makes sense for having an eigenvalue at s=-0.5
+C = K;
+Gcl = minreal(C*P/(1+C*P*H))
+figure
+step(Gcl)
+_make_figures("/tmp/tmpstga1v1j", "png", "Figure", -1, -1, 0, 0)
+close all
+clear all
+s = tf('s');
+%let's say your closed loop transfer function was the following for a particular gain Kp
+P = 10/((s+5)*(s+10));
+H = 1;
+K = linspace(0,10,101);
+figure()
+hold on;
+for i = 1:length(K)
+C = K(i);
+Gcl = (C*P/(1+C*P*H));
+%to extract the denominator coefficients as vectors of decreasing power of s, we can do this:
+[num,den] = tfdata(Gcl,'v');% the 'v' argument tells it to return these as a vector rather than cell array.
+%now, we can use the 'roots' function to find the roots of the characteristic equation
+myroots = roots(den);
+%to plot the real vs. imaginary components on a graph, we can do the following thing:
+plot(real(myroots),imag(myroots),'kx')
+end
+grid on
+title('Plot of Eigenvalues on the s Plane with Varying Kp')
+xlabel('real component ')
+ylabel('imaginary component')
+hold off;
+_make_figures("/tmp/tmpwdib78p3", "png", "Figure", -1, -1, 0, 0)
+close all
+clear all
+s = tf('s');
+%let's say your closed loop transfer function was the following for a particular gain Kp
+P = 10/((s+5)*(s+10));
+H = 1;
+K = linspace(0,10,101);
+figure()
+hold on;
+for i = 1:length(K)
+C = K(i);
+Gcl = (C*P/(1+C*P*H));
+%to extract the denominator coefficients as vectors of decreasing power of s, we can do this:
+[num,den] = tfdata(Gcl,'v');% the 'v' argument tells it to return these as a vector rather than cell array.
+%now, we can use the 'roots' function to find the roots of the characteristic equation
+myroots = roots(den);
+%to plot the real vs. imaginary components on a graph, we can do the following thing:
+plot(real(myroots),imag(myroots),'kx')
+end
+grid on
+title('Plot of Eigenvalues on the s Plane with Varying Kp')
+xlabel('real component ')
+ylabel('imaginary component')
+hold off;
+_make_figures("/tmp/tmp88hl5z5t", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Sat Oct 03 12:04:17 2020 UTC <herzs@ip-10-1-3-136>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/herzs/Week07_Friday");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/usr/local/lib/python3.6/dist-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+s = tf('s');
+figure
+rlocus(1/((s+1)*(s+2)*(s+3)*(s+4)*(s+5)*(s+6)))
+figure
+rlocus((s^2+s+30)/((s+5)*(s+12)*(s^2+30*s+450)))
+figure
+rlocus(1/((s+1)*(s+10)))
+figure
+rlocus((s+10)/(s+1))
+_make_figures("/tmp/tmpvf_dk32w", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+GH = 1/((s+1)*(s+2)*(s+3))
+rlocus(GH)
+_make_figures("/tmp/tmphqg62374", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+GH = 1/(s^2+s+10);
+rlocus(GH)
+_make_figures("/tmp/tmpdm993nvn", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+GH = (s+4)/((s+1)*(s+10));
+rlocus(GH)
+_make_figures("/tmp/tmp5x19kwbw", "png", "Figure", -1, -1, 0, 0)
+s = tf('s');
+GH = 1/((s^2+10*s+300)*(s+1)*(s+2));
+rlocus(GH)
+_make_figures("/tmp/tmp239csbpd", "png", "Figure", -1, -1, 0, 0)
+# Octave 4.2.2, Mon Oct 05 19:46:36 2020 UTC <herzs@ip-10-1-3-145>
